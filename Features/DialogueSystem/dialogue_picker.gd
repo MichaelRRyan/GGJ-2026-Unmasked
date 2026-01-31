@@ -51,15 +51,18 @@ func select_dialogue(npc_tag: String) -> String:
 #---------------------------------------------------------------------------------------------------
 func option_selected(option_no : int) -> String:
 	var options : Array = _current_dialogue.get("options", [])
-	var dialogue_option : Dictionary = options.get(option_no)
-	var next_dialogue_tag : String = dialogue_option.get("next_dialogue_tag", "")
-			
-	# Retrieve and set the next dialogue for this NPC based on the chosen dialogue.
-	npc_state_manager.set_next_dialogue_tag(_current_npc_tag, next_dialogue_tag)
+	if option_no < options.size():
+		var dialogue_option : Dictionary = options.get(option_no)
+		var next_dialogue_tag : String = dialogue_option.get("next_dialogue_tag", "")
+				
+		# Retrieve and set the next dialogue for this NPC based on the chosen dialogue.
+		npc_state_manager.set_next_dialogue_tag(_current_npc_tag, next_dialogue_tag)
+		
+		# Replace this by calling the interface to display this.
+		var next_dialogue = select_dialogue(_current_npc_tag)
+		return next_dialogue
 	
-	# Replace this by calling the interface to display this.
-	var next_dialogue = select_dialogue(_current_npc_tag)
-	return next_dialogue
+	return ""
 
 # Note: Should add a "continue" option to a dialogue object to automatically
 # 	populate a "continue..." dialogue.
