@@ -31,7 +31,7 @@ func _clicked():
 	
 	if _open:
 		$AnimatedSprite2D.play("idle_open")
-		cabinet_opened.emit("cabinet_opened" + str(dialogue_no))
+		#cabinet_opened.emit("cabinet_opened" + str(dialogue_no))
 		dialogue_no += 1
 	else:
 		$AnimatedSprite2D.play("idle_closed")
