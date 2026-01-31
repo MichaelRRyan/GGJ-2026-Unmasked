@@ -1,17 +1,10 @@
 extends Node
-class_name DialoguePicker
+#class_name DialoguePicker
 
 @export var dialogue_data_file: String = "res://Content/Dialogue/dialogue_data.json"
 
-# Node paths
-@export var dialogue_interface_node: NodePath
-@export var entity_state_manager_node: NodePath
-@export var game_event_manager_node: NodePath
-
 # Node references
-@onready var _dialogue_interface: DialogueInterface = get_node(dialogue_interface_node)
-@onready var entity_state_manager: EntityStateManager = get_node(entity_state_manager_node)
-@onready var game_event_manager: GameEventTracker = get_node(game_event_manager_node)
+@onready var _dialogue_interface: DialogueInterface = null
 
 ## Stores all dialogue for all NPCs.
 var _dialogue_data: Dictionary = {}  ## { "daisy": [ { "conditions": [], "text": "…" } ] }
@@ -40,12 +33,12 @@ func show_dialogue(entity_tag: String):
 ## Picks a piece of dialogue matching conditions.
 func _select_dialogue(entity_tag: String) -> DialogueData:
 	_current_npc_tag = entity_tag
-	var dialogue_tag = entity_state_manager.get_next_dialogue_tag(entity_tag)
+	var dialogue_tag = EntityStateManager.get_next_dialogue_tag(entity_tag)
 	var game_tags := []
 	
 	# Get the tags for the npc and world.
-	game_tags.append_array(entity_state_manager.get_tags(entity_tag))
-	game_tags.append_array(game_event_manager.get_active_tags())
+	game_tags.append_array(EntityStateManager.get_tags(entity_tag))
+	game_tags.append_array(GameEventTracker.get_active_tags())
 	
 	# Selects the first dialogue with valid tags.
 	var pool : Array = _dialogue_data.get(dialogue_tag, [])
@@ -54,7 +47,7 @@ func _select_dialogue(entity_tag: String) -> DialogueData:
 		
 		if _matches(conditions, game_tags):
 			_current_dialogue = DialogueData.new(entry)
-			entity_state_manager.set_next_dialogue_tag(_current_npc_tag, _current_dialogue.next_dialogue_tag)
+			EntityStateManager.set_next_dialogue_tag(_current_npc_tag, _current_dialogue.next_dialogue_tag)
 			return _current_dialogue
 			
 	return null  ## fallback
@@ -68,7 +61,7 @@ func option_selected(option_no : int) -> DialogueData:
 		var next_dialogue_tag : String = response.next_dialogue_tag
 				
 		# Retrieve and set the next dialogue for this NPC based on the chosen dialogue.
-		entity_state_manager.set_next_dialogue_tag(_current_npc_tag, next_dialogue_tag)
+		EntityStateManager.set_next_dialogue_tag(_current_npc_tag, next_dialogue_tag)
 		
 		# Replace this by calling the interface to display this.
 		var next_dialogue = _select_dialogue(_current_npc_tag)

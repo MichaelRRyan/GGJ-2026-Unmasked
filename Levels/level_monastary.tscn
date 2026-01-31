@@ -22,6 +22,4 @@ scene = "res://Levels/level_overworld.tscn"
 texture = ExtResource("3_uu0y2")
 
 [node name="Nun" parent="Entities" parent_id_path=PackedInt32Array(721033671) index="2" unique_id=2110108148 instance=ExtResource("4_uu0y2")]
-position = Vector2(111, 9)
-
-[connection signal="npc_clicked" from="Entities/Nun" to="Systems/DialogueController" method="show_dialogue"]
+position = Vector2(50, -3)

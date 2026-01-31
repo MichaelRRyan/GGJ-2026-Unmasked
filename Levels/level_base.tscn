@@ -1,10 +1,6 @@
 [gd_scene format=3 uid="uid://p8me13tpt1is"]
 
 [ext_resource type="PackedScene" uid="uid://bd00x3ncr240f" path="res://Features/DialogueSystem/dialogue_interface.tscn" id="1_exesn"]
-[ext_resource type="Script" uid="uid://dci6pxoc448n6" path="res://Features/DialogueSystem/dialogue_picker.gd" id="2_8kvgk"]
-[ext_resource type="Script" uid="uid://ctb34q23cvkgp" path="res://Features/GameEventTracker/game_event_tracker.gd" id="3_ycc68"]
-[ext_resource type="Script" uid="uid://c3uhw1nt66w2c" path="res://Features/EntityStateManager/entity_state_manager.gd" id="4_p71ty"]
-[ext_resource type="Script" uid="uid://bilnsk2cdssj1" path="res://Features/GameEventTracker/task_manager.gd" id="5_7n0l5"]
 
 [node name="LevelBase" type="Node2D" unique_id=391544845]
 
@@ -15,27 +11,5 @@ zoom = Vector2(4, 4)
 
 [node name="DialogueInterface" parent="DialogueUI" unique_id=1998899371 instance=ExtResource("1_exesn")]
 visible = false
-dialogue_picker_node = NodePath("../../Systems/DialogueController")
-
-[node name="Systems" type="Node" parent="." unique_id=1105355856]
-
-[node name="DialogueController" type="Node" parent="Systems" unique_id=642726731]
-script = ExtResource("2_8kvgk")
-dialogue_interface_node = NodePath("../../DialogueUI/DialogueInterface")
-entity_state_manager_node = NodePath("../EntityStateManager")
-game_event_manager_node = NodePath("../GameEventTracker")
-metadata/_custom_type_script = "uid://dci6pxoc448n6"
-
-[node name="GameEventTracker" type="Node" parent="Systems" unique_id=468763786]
-script = ExtResource("3_ycc68")
-metadata/_custom_type_script = "uid://ctb34q23cvkgp"
-
-[node name="EntityStateManager" type="Node" parent="Systems" unique_id=58538588]
-script = ExtResource("4_p71ty")
-metadata/_custom_type_script = "uid://c3uhw1nt66w2c"
-
-[node name="TaskManager" type="Node" parent="Systems" unique_id=1475083837]
-script = ExtResource("5_7n0l5")
-metadata/_custom_type_script = "uid://bilnsk2cdssj1"
 
 [node name="Entities" type="Node2D" parent="." unique_id=721033671]
