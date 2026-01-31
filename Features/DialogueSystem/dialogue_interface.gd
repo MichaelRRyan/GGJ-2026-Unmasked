@@ -1,16 +1,13 @@
 extends Control
 class_name DialogueInterface
 
-@export var dialogue_picker_node: NodePath
-
-@onready var picker: DialoguePicker = get_node(dialogue_picker_node)
-
 var ResponseOptionScene = preload("res://Features/DialogueSystem/dialogue_option.tscn")
 
 
 ## Sets the interface to hidden on game start.
 #-------------------------------------------------------------------------------
 func _ready():
+	DialogueController._dialogue_interface = self
 	self.hide()
 
 
@@ -52,7 +49,7 @@ func _option_selected(option_no : int) -> void:
 	for child in $DialogueOptions.get_children():
 		child.queue_free()
 	
-	var dialogue_data : DialogueData = picker.option_selected(option_no)
+	var dialogue_data : DialogueData = DialogueController.option_selected(option_no)
 	if dialogue_data != null:
 		call_deferred("_display_dialogue", dialogue_data)
 	else:
