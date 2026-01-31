@@ -31,8 +31,9 @@ func _ready() -> void:
 
 #----------------------------------------------------------------------------------------------------
 func show_dialogue(entity_tag: String):
-	var dialogue_data : DialogueData = _select_dialogue(entity_tag)
-	_dialogue_interface.show_dialogue(dialogue_data)
+	if not _dialogue_interface.visible:
+		var dialogue_data : DialogueData = _select_dialogue(entity_tag)
+		_dialogue_interface.show_dialogue(dialogue_data)
 
 
 #---------------------------------------------------------------------------------------------------

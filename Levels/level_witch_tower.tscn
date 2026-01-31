@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://b1mhvg63jgb6h"]
+
+[ext_resource type="PackedScene" uid="uid://p8me13tpt1is" path="res://Levels/level_base.tscn" id="1_rguvn"]
+[ext_resource type="PackedScene" uid="uid://cja4dwr4nk8gf" path="res://Features/Door2D/door.tscn" id="2_un0hn"]
+[ext_resource type="Texture2D" uid="uid://bvsoecitydr5t" path="res://icon.svg" id="3_k6qm3"]
+
+[node name="LevelBase" unique_id=391544845 instance=ExtResource("1_rguvn")]
+
+[node name="Label" type="Label" parent="Entities" parent_id_path=PackedInt32Array(721033671) index="0" unique_id=77922241]
+offset_left = -44.0
+offset_top = -94.0
+offset_right = 44.0
+offset_bottom = -71.0
+text = "Witch Tower"
+
+[node name="Door" parent="Entities" parent_id_path=PackedInt32Array(721033671) index="1" unique_id=702500341 instance=ExtResource("2_un0hn")]
+position = Vector2(-144, 52)
+scene = "res://Levels/level_overworld.tscn"
+
+[node name="Sprite2D2" type="Sprite2D" parent="Entities/Door" index="2" unique_id=1721162785]
+texture = ExtResource("3_k6qm3")
