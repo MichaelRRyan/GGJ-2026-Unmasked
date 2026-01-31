@@ -1,6 +1,7 @@
 extends Area2D
 
 signal cabinet_opened(dialogue_tag : String)
+signal cabinet_closed(dialogue_tag : String)
 
 var _mouse_over_clickable = false
 var _open = false
@@ -31,9 +32,10 @@ func _clicked():
 	
 	if _open:
 		$AnimatedSprite2D.play("idle_open")
-		#cabinet_opened.emit("cabinet_opened" + str(dialogue_no))
+		cabinet_opened.emit("cabinet_opened" + str(dialogue_no))
 		dialogue_no += 1
 	else:
+		cabinet_closed.emit("cabinet_closed" + str(dialogue_no))
 		$AnimatedSprite2D.play("idle_closed")
 	
 	$CollisionOpened.disabled = !_open

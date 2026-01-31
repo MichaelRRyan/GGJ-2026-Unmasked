@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dolq84li7twg4"]
+[gd_scene format=3 uid="uid://dolq84li7twg4"]
 
 [ext_resource type="Texture2D" uid="uid://fbusxsidiwm" path="res://Assets/Images/Cabinet/cabinet0.png" id="1_igx83"]
 [ext_resource type="Script" uid="uid://bdordxuu67dkt" path="res://Features/ClickableProps2D/Cabinet/cabinet.gd" id="1_xg7qd"]
@@ -29,20 +29,20 @@ size = Vector2(229.86028, 85.14264)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xg7qd"]
 size = Vector2(286.3885, 151.70071)
 
-[node name="Cabinet" type="Area2D"]
+[node name="Cabinet" type="Area2D" unique_id=1176927897]
 script = ExtResource("1_xg7qd")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1463222158]
 sprite_frames = SubResource("SpriteFrames_5kguq")
 animation = &"idle_closed"
 
-[node name="CollisionClosed" type="CollisionShape2D" parent="."]
+[node name="CollisionClosed" type="CollisionShape2D" parent="." unique_id=553531652]
 position = Vector2(-54.5, -48)
 rotation = 0.12897705
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_2dk2w")
 
-[node name="CollisionOpened" type="CollisionShape2D" parent="."]
+[node name="CollisionOpened" type="CollisionShape2D" parent="." unique_id=98306645]
 position = Vector2(-88.96411, -14.48347)
 rotation = 0.12052276
 scale = Vector2(0.9999997, 0.9999997)

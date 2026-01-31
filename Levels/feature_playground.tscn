@@ -55,10 +55,13 @@ position = Vector2(313, -198.99998)
 scale = Vector2(1.0199842, 1.0420398)
 
 [node name="Key" parent="Entities" unique_id=735540810 instance=ExtResource("9_oh2co")]
-position = Vector2(747, 260)
+visible = false
+position = Vector2(1118.0001, 547.99994)
+rotation = 1.1545122
 scale = Vector2(0.16921681, 0.18784751)
 
-[connection signal="cabinet_opened" from="Entities/Cabinet" to="DialogueUI/DialogueInterface" method="show_dialogue"]
+[connection signal="cabinet_closed" from="Entities/Cabinet" to="Entities/Key" method="_hide"]
+[connection signal="cabinet_opened" from="Entities/Cabinet" to="Entities/Key" method="_show"]
 [connection signal="npc_clicked" from="Entities/NPC" to="DialogueUI/DialogueInterface" method="show_dialogue"]
 [connection signal="mouse_entered" from="Entities/Key" to="Entities/Key" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Entities/Key" to="Entities/Key" method="_on_mouse_exited"]
