@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b1j34pv3aff8q"]
+
+[ext_resource type="PackedScene" uid="uid://p8me13tpt1is" path="res://Levels/level_base.tscn" id="1_sd851"]
+[ext_resource type="Texture2D" uid="uid://cw2nfq23q337t" path="res://Assets/Images/Village/basic landscape.png" id="2_aj14r"]
+[ext_resource type="PackedScene" uid="uid://cnaobu41hshdd" path="res://Features/NPC2D/npc.tscn" id="2_vbnw2"]
+
+[node name="Overworld" unique_id=391544845 instance=ExtResource("1_sd851")]
+
+[node name="NPC" parent="Entities" parent_id_path=PackedInt32Array(721033671) index="0" unique_id=2110108148 instance=ExtResource("2_vbnw2")]
+position = Vector2(616.3972, 350.9941)
+
+[node name="BasicLandscape" type="Sprite2D" parent="." index="4" unique_id=1079110281]
+z_index = -1
+position = Vector2(572, 399)
+texture = ExtResource("2_aj14r")
+
+[connection signal="npc_clicked" from="Entities/NPC" to="Systems/DialogueController" method="show_dialogue"]

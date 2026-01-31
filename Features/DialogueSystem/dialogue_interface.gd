@@ -2,9 +2,10 @@ extends Control
 class_name DialogueInterface
 
 @export var dialogue_picker_node: NodePath
-@export var use_fade_timer = false
 
 @onready var picker: DialoguePicker = get_node(dialogue_picker_node)
+
+var ResponseOptionScene = preload("res://Features/DialogueSystem/dialogue_option.tscn")
 
 
 ## Sets the interface to hidden on game start.
@@ -15,41 +16,56 @@ func _ready():
 
 ## Display dialogue when NPC emits a signal.
 #-------------------------------------------------------------------------------
-func show_dialogue(npc_tag: String) -> void:
+func show_dialogue(dialogue_data: DialogueData) -> void:
 	self.show()
-	
-	var text := picker.select_dialogue(npc_tag)
-	_display_dialogue(text)
+	_display_dialogue(dialogue_data)
 
 
 #-------------------------------------------------------------------------------
-func _display_dialogue(text: String) -> void:
-	$ColorRect/Label.text = text
-	
-	if use_fade_timer:
-		$FadeTimer.start()
+func _display_dialogue(dialogue_data: DialogueData) -> void:
+	# If data is valid (not null)
+	if dialogue_data:
+		$ColorRect/Label.text = dialogue_data.text
+		
+		# Display dialogue options as buttons.
+		if not dialogue_data.responses.is_empty():
+			for i in dialogue_data.responses.size():
+				var optionScene : Button = ResponseOptionScene.instantiate()
+				optionScene.text = dialogue_data.responses[i].text
+				optionScene.connect("pressed", _option_selected.bind(i))
+				$DialogueOptions.add_child(optionScene)
+				
+		# Else display a "Continue..." button,
+		else:
+			var optionScene : Button = ResponseOptionScene.instantiate()
+			optionScene.text = "Continue..."
+			optionScene.connect("pressed", _on_continue_pressed)
+			$DialogueOptions.add_child(optionScene)
 
 
 #-------------------------------------------------------------------------------
-func _on_option_1_pressed():
-	_option_selected(0)
-	
-func _on_option_2_pressed():
-	_option_selected(1)
-	
-func _on_option_3_pressed():
-	_option_selected(2)
-
-
-#-------------------------------------------------------------------------------
+# Informs the dialogue controller an option has been clicked.
+# 	If the controller returns text, displays a new message.
+# 	Otherwise, hides the UI.
 func _option_selected(option_no : int) -> void:
-	var dialogue_text = picker.option_selected(option_no)
-	if dialogue_text != "":
-		_display_dialogue(dialogue_text)
+	# Delete all the response options.
+	for child in $DialogueOptions.get_children():
+		child.queue_free()
+	
+	var dialogue_data : DialogueData = picker.option_selected(option_no)
+	if dialogue_data != null:
+		_display_dialogue(dialogue_data)
 	else:
 		visible = false
 
 
 #-------------------------------------------------------------------------------
-func _on_fade_timer_timeout():
+func _on_continue_pressed():
+	# Delete all the response options.
+	for child in $DialogueOptions.get_children():
+		child.queue_free()
+	
 	visible = false
+
+
+#-------------------------------------------------------------------------------
