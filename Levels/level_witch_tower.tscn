@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://p8me13tpt1is" path="res://Levels/level_base.tscn" id="1_rguvn"]
 [ext_resource type="PackedScene" uid="uid://cja4dwr4nk8gf" path="res://Features/Door2D/door.tscn" id="2_un0hn"]
 [ext_resource type="Texture2D" uid="uid://bvsoecitydr5t" path="res://icon.svg" id="3_k6qm3"]
+[ext_resource type="PackedScene" uid="uid://fe7xw5jasgfn" path="res://Features/NPC2D/npc_witch.tscn" id="4_k6qm3"]
 
 [node name="LevelBase" unique_id=391544845 instance=ExtResource("1_rguvn")]
 
@@ -19,3 +20,6 @@ scene = "res://Levels/level_overworld.tscn"
 
 [node name="Sprite2D2" type="Sprite2D" parent="Entities/Door" index="2" unique_id=1721162785]
 texture = ExtResource("3_k6qm3")
+
+[node name="NPC" parent="Entities" parent_id_path=PackedInt32Array(721033671) index="2" unique_id=2110108148 instance=ExtResource("4_k6qm3")]
+position = Vector2(72, 25)

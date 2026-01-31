@@ -1,12 +1,11 @@
 {
 	"guy": {
-		"next_dialogue_tag": "person_text_1",
-		"is_thirsty": false,
-		"affection_score": 0.0
+		"next_dialogue_tag": "person_text_1"
 	},
 	"nun": {
-		"next_dialogue_tag": "nun_0",
-		"is_thirsty": false,
-		"affection_score": 0.0
+		"next_dialogue_tag": "nun_0"
+	},
+	"witch": {
+		"next_dialogue_tag": "witch_0"
 	}
 }

@@ -100,6 +100,13 @@
 		"text": "Oh well a very warm welcome to you! This town is a lovely place, though it's been odd lately...",
 		"next_dialogue_tag": "nun_0"
 		}
+	],
+	"witch_0": [
+		{
+		"conditions": [],
+		"text": "Witch text...",
+		"next_dialogue_tag": "witch_0"
+		}
 	]
 }
   
