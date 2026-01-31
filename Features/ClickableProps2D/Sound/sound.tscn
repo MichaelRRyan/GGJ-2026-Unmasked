@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b8fsld12ehyuk"]
+
+[ext_resource type="Script" uid="uid://by0l6q1g8joy8" path="res://Features/ClickableProps2D/Sound/sound.gd" id="1_yubpy"]
+[ext_resource type="Texture2D" uid="uid://dq623eddhjsy3" path="res://Assets/Images/Sound/volume.png" id="2_nlvun"]
+[ext_resource type="Script" uid="uid://cpcfoebhp48d1" path="res://Features/ClickableProps2D/Sound/texture_button.gd" id="3_pk2a5"]
+
+[node name="Sound" type="Area2D" unique_id=1539945967]
+script = ExtResource("1_yubpy")
+metadata/_custom_type_script = "uid://6tf1p4edfkwg"
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=2065847277]
+offset_left = 1040.7966
+offset_top = 22.999998
+offset_right = 1552.7966
+offset_bottom = 561.0
+scale = Vector2(0.14930683, 0.1262205)
+texture_normal = ExtResource("2_nlvun")
+script = ExtResource("3_pk2a5")

@@ -7,6 +7,8 @@
 [ext_resource type="Script" uid="uid://c3uhw1nt66w2c" path="res://Features/GardenNPC3D/npc_state_manager.gd" id="5_oh2co"]
 [ext_resource type="Script" uid="uid://bilnsk2cdssj1" path="res://Features/GameEventTracker/task_manager.gd" id="6_ji208"]
 [ext_resource type="PackedScene" uid="uid://cnaobu41hshdd" path="res://Features/NPC2D/npc.tscn" id="7_xrgqn"]
+[ext_resource type="PackedScene" uid="uid://b8fsld12ehyuk" path="res://Features/ClickableProps2D/Sound/sound.tscn" id="8_jmebr"]
+[ext_resource type="PackedScene" uid="uid://b2k7hh86cttit" path="res://Features/ClickableProps2D/Key/key.tscn" id="9_oh2co"]
 
 [node name="FeaturePlayground" type="Node2D" unique_id=1510965746]
 
@@ -44,10 +46,23 @@ metadata/_custom_type_script = "uid://bilnsk2cdssj1"
 [node name="Entities" type="Node2D" parent="." unique_id=1828242762]
 
 [node name="Cabinet" parent="Entities" unique_id=569677355 instance=ExtResource("1_j3o3w")]
-position = Vector2(1095, 552)
+position = Vector2(1203, 593)
 
 [node name="NPC" parent="Entities" unique_id=775205742 instance=ExtResource("7_xrgqn")]
 position = Vector2(237, 328)
 
-[connection signal="cabinet_opened" from="Entities/Cabinet" to="Systems/DialogueController" method="show_dialogue"]
+[node name="Sound" parent="Entities" unique_id=1539945967 instance=ExtResource("8_jmebr")]
+position = Vector2(313, -198.99998)
+scale = Vector2(1.0199842, 1.0420398)
+
+[node name="Key" parent="Entities" unique_id=735540810 instance=ExtResource("9_oh2co")]
+visible = false
+position = Vector2(1118.0001, 547.99994)
+rotation = 1.1545122
+scale = Vector2(0.16921681, 0.18784751)
+
 [connection signal="npc_clicked" from="Entities/NPC" to="Systems/DialogueController" method="show_dialogue"]
+[connection signal="cabinet_closed" from="Entities/Cabinet" to="Entities/Key" method="_hide"]
+[connection signal="cabinet_opened" from="Entities/Cabinet" to="Entities/Key" method="_show"]
+[connection signal="mouse_entered" from="Entities/Key" to="Entities/Key" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Entities/Key" to="Entities/Key" method="_on_mouse_exited"]
