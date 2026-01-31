@@ -1,5 +1,9 @@
 [gd_scene format=3 uid="uid://2onvsnnmxmu4"]
 
 [node name="Option1" type="Button" unique_id=629797611]
-size_flags_vertical = 3
-text = "Your are very wrong"
+clip_contents = true
+custom_minimum_size = Vector2(0, 60)
+offset_right = 321.0
+offset_bottom = 60.0
+text = "Your are very wrong AAAAAAAAAAA"
+autowrap_mode = 3
