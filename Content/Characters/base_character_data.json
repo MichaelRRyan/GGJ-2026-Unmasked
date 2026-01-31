@@ -1,0 +1,7 @@
+{
+	"guy": {
+		"is_thirsty": false,
+		"affection_score": 0.0,
+		"next_dialogue_tag": "person_text_1"
+	}
+}

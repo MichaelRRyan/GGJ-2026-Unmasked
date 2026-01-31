@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://dolq84li7twg4"]
+
+[ext_resource type="Texture2D" uid="uid://fbusxsidiwm" path="res://Assets/Images/Cabinet/cabinet0.png" id="1_igx83"]
+[ext_resource type="Script" uid="uid://bdordxuu67dkt" path="res://Features/ClickableProps2D/Cabinet/cabinet.gd" id="1_xg7qd"]
+[ext_resource type="Texture2D" uid="uid://b3xkfmuvsasto" path="res://Assets/Images/Cabinet/cabinet1.png" id="3_k43hi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5kguq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_igx83")
+}],
+"loop": true,
+"name": &"idle_closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_k43hi")
+}],
+"loop": true,
+"name": &"idle_open",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2dk2w"]
+size = Vector2(229.86028, 85.14264)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xg7qd"]
+size = Vector2(286.3885, 151.70071)
+
+[node name="Cabinet" type="Area2D"]
+script = ExtResource("1_xg7qd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_5kguq")
+animation = &"idle_closed"
+
+[node name="CollisionClosed" type="CollisionShape2D" parent="."]
+position = Vector2(-54.5, -48)
+rotation = 0.12897705
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_2dk2w")
+
+[node name="CollisionOpened" type="CollisionShape2D" parent="."]
+position = Vector2(-88.96411, -14.48347)
+rotation = 0.12052276
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_xg7qd")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
