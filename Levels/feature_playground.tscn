@@ -24,6 +24,7 @@ dialogue_picker_node = NodePath("../../Systems/DialogueController")
 
 [node name="DialogueController" type="Node" parent="Systems" unique_id=636413716]
 script = ExtResource("3_xrgqn")
+dialogue_interface_node = NodePath("../../DialogueUI/DialogueInterface")
 npc_state_manager_node = NodePath("../NPCStateManager")
 game_event_manager_node = NodePath("../GameEventTracker")
 metadata/_custom_type_script = "uid://dci6pxoc448n6"
@@ -48,5 +49,5 @@ position = Vector2(1095, 552)
 [node name="NPC" parent="Entities" unique_id=775205742 instance=ExtResource("7_xrgqn")]
 position = Vector2(237, 328)
 
-[connection signal="cabinet_opened" from="Entities/Cabinet" to="DialogueUI/DialogueInterface" method="show_dialogue"]
-[connection signal="npc_clicked" from="Entities/NPC" to="DialogueUI/DialogueInterface" method="show_dialogue"]
+[connection signal="cabinet_opened" from="Entities/Cabinet" to="Systems/DialogueController" method="show_dialogue"]
+[connection signal="npc_clicked" from="Entities/NPC" to="Systems/DialogueController" method="show_dialogue"]

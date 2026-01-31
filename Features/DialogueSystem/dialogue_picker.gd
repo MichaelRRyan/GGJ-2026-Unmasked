@@ -3,9 +3,13 @@ class_name DialoguePicker
 
 @export var dialogue_data_file: String = "res://Content/Dialogue/dialogue_data.json"
 
+# Node paths
+@export var dialogue_interface_node: NodePath
 @export var npc_state_manager_node: NodePath
 @export var game_event_manager_node: NodePath
 
+# Node references
+@onready var _dialogue_interface: DialogueInterface = get_node(dialogue_interface_node)
 @onready var npc_state_manager: NPCStateManager = get_node(npc_state_manager_node)
 @onready var game_event_manager: GameEventTracker = get_node(game_event_manager_node)
 
@@ -13,7 +17,7 @@ class_name DialoguePicker
 var _dialogue_data: Dictionary = {}  ## { "daisy": [ { "conditions": [], "text": "…" } ] }
 
 var _current_npc_tag = null
-var _current_dialogue = null
+var _current_dialogue : DialogueData = null
 
 
 #---------------------------------------------------------------------------------------------------
@@ -25,15 +29,21 @@ func _ready() -> void:
 		file.close()
 
 
+#----------------------------------------------------------------------------------------------------
+func show_dialogue(entity_tag: String):
+	var dialogue_data : DialogueData = _select_dialogue(entity_tag)
+	_dialogue_interface.show_dialogue(dialogue_data)
+
+
 #---------------------------------------------------------------------------------------------------
 ## Picks a piece of dialogue matching conditions.
-func select_dialogue(npc_tag: String) -> String:
-	_current_npc_tag = npc_tag
-	var dialogue_tag = npc_state_manager.get_next_dialogue_tag(npc_tag)
+func _select_dialogue(entity_tag: String) -> DialogueData:
+	_current_npc_tag = entity_tag
+	var dialogue_tag = npc_state_manager.get_next_dialogue_tag(entity_tag)
 	var game_tags := []
 	
 	# Get the tags for the npc and world.
-	game_tags.append_array(npc_state_manager.get_tags(npc_tag))
+	game_tags.append_array(npc_state_manager.get_tags(entity_tag))
 	game_tags.append_array(game_event_manager.get_active_tags())
 	
 	# Selects the first dialogue with valid tags.
@@ -42,27 +52,27 @@ func select_dialogue(npc_tag: String) -> String:
 		var conditions : Array = entry.conditions
 		
 		if _matches(conditions, game_tags):
-			_current_dialogue = entry
-			return entry.text
+			_current_dialogue = DialogueData.new(entry)
+			npc_state_manager.set_next_dialogue_tag(_current_npc_tag, _current_dialogue.next_dialogue_tag)
+			return _current_dialogue
 			
-	return "[Invalid Dialogue Tag]"  ## fallback
+	return null  ## fallback
 
 
 #---------------------------------------------------------------------------------------------------
-func option_selected(option_no : int) -> String:
-	var options : Array = _current_dialogue.get("options", [])
-	if option_no < options.size():
-		var dialogue_option : Dictionary = options.get(option_no)
-		var next_dialogue_tag : String = dialogue_option.get("next_dialogue_tag", "")
+func option_selected(option_no : int) -> DialogueData:
+	if option_no < _current_dialogue.responses.size():
+		var response : DialogueData = _current_dialogue.responses[option_no]
+		var next_dialogue_tag : String = response.next_dialogue_tag
 				
 		# Retrieve and set the next dialogue for this NPC based on the chosen dialogue.
 		npc_state_manager.set_next_dialogue_tag(_current_npc_tag, next_dialogue_tag)
 		
 		# Replace this by calling the interface to display this.
-		var next_dialogue = select_dialogue(_current_npc_tag)
+		var next_dialogue = _select_dialogue(_current_npc_tag)
 		return next_dialogue
 	
-	return ""
+	return null
 
 # Note: Should add a "continue" option to a dialogue object to automatically
 # 	populate a "continue..." dialogue.
