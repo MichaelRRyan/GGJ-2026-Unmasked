@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bmx8kav4724ah"]
+[gd_scene format=3 uid="uid://bmx8kav4724ah"]
 
 [ext_resource type="PackedScene" uid="uid://dolq84li7twg4" path="res://Features/ClickableProps2D/Cabinet/cabinet.tscn" id="1_j3o3w"]
 [ext_resource type="PackedScene" uid="uid://bd00x3ncr240f" path="res://Features/DialogueSystem/dialogue_interface.tscn" id="2_jtf1o"]
@@ -8,44 +8,44 @@
 [ext_resource type="Script" uid="uid://bilnsk2cdssj1" path="res://Features/GameEventTracker/task_manager.gd" id="6_ji208"]
 [ext_resource type="PackedScene" uid="uid://cnaobu41hshdd" path="res://Features/NPC2D/npc.tscn" id="7_xrgqn"]
 
-[node name="FeaturePlayground" type="Node2D"]
+[node name="FeaturePlayground" type="Node2D" unique_id=1510965746]
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1460549941]
 position = Vector2(551, 323)
 zoom = Vector2(0.6, 0.6)
 
-[node name="DialogueUI" type="CanvasLayer" parent="."]
+[node name="DialogueUI" type="CanvasLayer" parent="." unique_id=865840332]
 
-[node name="DialogueInterface" parent="DialogueUI" instance=ExtResource("2_jtf1o")]
+[node name="DialogueInterface" parent="DialogueUI" unique_id=2017239191 instance=ExtResource("2_jtf1o")]
 visible = false
 dialogue_picker_node = NodePath("../../Systems/DialogueController")
 
-[node name="Systems" type="Node" parent="."]
+[node name="Systems" type="Node" parent="." unique_id=1163807989]
 
-[node name="DialogueController" type="Node" parent="Systems"]
+[node name="DialogueController" type="Node" parent="Systems" unique_id=636413716]
 script = ExtResource("3_xrgqn")
 npc_state_manager_node = NodePath("../NPCStateManager")
 game_event_manager_node = NodePath("../GameEventTracker")
 metadata/_custom_type_script = "uid://dci6pxoc448n6"
 
-[node name="GameEventTracker" type="Node" parent="Systems"]
+[node name="GameEventTracker" type="Node" parent="Systems" unique_id=1275389527]
 script = ExtResource("4_jmebr")
 metadata/_custom_type_script = "uid://ctb34q23cvkgp"
 
-[node name="NPCStateManager" type="Node" parent="Systems"]
+[node name="NPCStateManager" type="Node" parent="Systems" unique_id=561188057]
 script = ExtResource("5_oh2co")
 metadata/_custom_type_script = "uid://c3uhw1nt66w2c"
 
-[node name="TaskManager" type="Node" parent="Systems"]
+[node name="TaskManager" type="Node" parent="Systems" unique_id=72628056]
 script = ExtResource("6_ji208")
 metadata/_custom_type_script = "uid://bilnsk2cdssj1"
 
-[node name="Entities" type="Node2D" parent="."]
+[node name="Entities" type="Node2D" parent="." unique_id=1828242762]
 
-[node name="Cabinet" parent="Entities" instance=ExtResource("1_j3o3w")]
+[node name="Cabinet" parent="Entities" unique_id=569677355 instance=ExtResource("1_j3o3w")]
 position = Vector2(1095, 552)
 
-[node name="NPC" parent="Entities" instance=ExtResource("7_xrgqn")]
+[node name="NPC" parent="Entities" unique_id=775205742 instance=ExtResource("7_xrgqn")]
 position = Vector2(237, 328)
 
 [connection signal="cabinet_opened" from="Entities/Cabinet" to="DialogueUI/DialogueInterface" method="show_dialogue"]
