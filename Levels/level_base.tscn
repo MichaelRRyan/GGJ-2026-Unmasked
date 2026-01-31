@@ -22,9 +22,8 @@ dialogue_picker_node = NodePath("../../Systems/DialogueController")
 
 [node name="DialogueController" type="Node" parent="Systems" unique_id=642726731]
 script = ExtResource("2_8kvgk")
-dialogue_data_file = null
 dialogue_interface_node = NodePath("../../DialogueUI/DialogueInterface")
-entity_state_manager_node = null
+entity_state_manager_node = NodePath("../EntityStateManager")
 game_event_manager_node = NodePath("../GameEventTracker")
 metadata/_custom_type_script = "uid://dci6pxoc448n6"
 

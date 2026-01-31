@@ -2,7 +2,6 @@ extends Control
 class_name DialogueInterface
 
 @export var dialogue_picker_node: NodePath
-@export var use_fade_timer = false
 
 @onready var picker: DialoguePicker = get_node(dialogue_picker_node)
 
@@ -42,10 +41,6 @@ func _display_dialogue(dialogue_data: DialogueData) -> void:
 			optionScene.text = "Continue..."
 			optionScene.connect("pressed", _on_continue_pressed)
 			$DialogueOptions.add_child(optionScene)
-		
-		# Optionally fade out dialogue after a delay.
-		if use_fade_timer:
-			$FadeTimer.start()
 
 
 #-------------------------------------------------------------------------------
@@ -74,13 +69,3 @@ func _on_continue_pressed():
 
 
 #-------------------------------------------------------------------------------
-func _on_fade_timer_timeout():
-	visible = false
-
-
-func _on_key_mouse_entered() -> void:
-	pass # Replace with function body.
-
-
-func _on_key_mouse_exited() -> void:
-	pass # Replace with function body.

@@ -60,6 +60,7 @@ func _select_dialogue(entity_tag: String) -> DialogueData:
 
 
 #---------------------------------------------------------------------------------------------------
+# Called when a response option is pressed.
 func option_selected(option_no : int) -> DialogueData:
 	if option_no < _current_dialogue.responses.size():
 		var response : DialogueData = _current_dialogue.responses[option_no]
@@ -73,9 +74,6 @@ func option_selected(option_no : int) -> DialogueData:
 		return next_dialogue
 	
 	return null
-
-# Note: Should add a "continue" option to a dialogue object to automatically
-# 	populate a "continue..." dialogue.
 
 
 #---------------------------------------------------------------------------------------------------

@@ -43,10 +43,6 @@ offset_right = 1126.0
 offset_bottom = 122.0
 text = "Teest"
 
-[node name="FadeTimer" type="Timer" parent="." unique_id=1828489986]
-wait_time = 3.0
-one_shot = true
-
 [node name="DialogueOptions" type="VBoxContainer" parent="." unique_id=1109674068]
 layout_mode = 1
 anchors_preset = 3
@@ -62,5 +58,3 @@ grow_horizontal = 0
 grow_vertical = 0
 theme_override_constants/separation = 10
 metadata/_edit_group_ = true
-
-[connection signal="timeout" from="FadeTimer" to="." method="_on_fade_timer_timeout"]
