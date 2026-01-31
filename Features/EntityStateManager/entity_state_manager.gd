@@ -1,5 +1,5 @@
 extends Node
-class_name NPCStateManager
+class_name EntityStateManager
 
 @export var base_character_data_file: String = "res://Content/Characters/base_character_data.json"
 
