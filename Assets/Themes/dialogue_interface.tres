@@ -1,4 +1,116 @@
 [gd_resource type="Theme" format=3 uid="uid://cmr35qfsqipuf"]
 
+[ext_resource type="FontFile" uid="uid://c0oif4n518esq" path="res://Assets/Font/myawesomefont.ttf" id="1_8vn6r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hs6os"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y0ta0"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+corner_detail = 5
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wglyh"]
+bg_color = Color(0.78657365, 0.7290695, 0.5268067, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k6ne3"]
+bg_color = Color(0.64741254, 0.58819, 0.382513, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+corner_detail = 5
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8vn6r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8vn6r"]
+bg_color = Color(0.7882353, 0.7294118, 0.5254902, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+corner_detail = 12
+
 [resource]
-Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_color = Color(0.21079585, 0.12869903, 0, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.4441731, 0.35467193, 0.214838, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0.21176471, 0.12941177, 0, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 18
+Button/fonts/font = ExtResource("1_8vn6r")
+Button/styles/disabled = SubResource("StyleBoxFlat_hs6os")
+Button/styles/focus = SubResource("StyleBoxFlat_y0ta0")
+Button/styles/hover = SubResource("StyleBoxFlat_wglyh")
+Button/styles/normal = SubResource("StyleBoxFlat_wglyh")
+Button/styles/pressed = SubResource("StyleBoxFlat_k6ne3")
+Label/colors/font_color = Color(0.21176471, 0.12941177, 0, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/constants/line_spacing = 3
+Label/constants/outline_size = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 1
+Label/font_sizes/font_size = 24
+Label/fonts/font = ExtResource("1_8vn6r")
+Label/styles/focus = SubResource("StyleBoxFlat_y0ta0")
+Label/styles/normal = SubResource("StyleBoxEmpty_8vn6r")
+Panel/styles/normal = null
+Panel/styles/panel = SubResource("StyleBoxFlat_8vn6r")
