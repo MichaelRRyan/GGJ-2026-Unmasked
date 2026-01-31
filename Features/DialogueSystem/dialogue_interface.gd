@@ -84,3 +84,7 @@ func _on_key_mouse_entered() -> void:
 
 func _on_key_mouse_exited() -> void:
 	pass # Replace with function body.
+
+
+func _on_baker_npc_clicked(npc_tag: String) -> void:
+	pass # Replace with function body.

@@ -97,3 +97,7 @@ func _matches(conditions: Array, game_tags: Array) -> bool:
 
 
 #---------------------------------------------------------------------------------------------------
+
+
+func _on_baker_npc_clicked(npc_tag: String) -> void:
+	pass # Replace with function body.

@@ -69,6 +69,21 @@
 		"text": "You've expended all my dialogue",
 		"next_dialogue_tag": "person_text_3"
 	  }
-	]
+	],
+	"baker_text_1": [
+  {
+	"conditions": [],
+	"text": "Fresh bread just came out of the oven!",
+	"next_dialogue_tag": "baker_text_2"
+  }
+],
+	"baker_text_2": [
+  {
+	"conditions": [],
+	"text": "Careful, it's still warm.",
+	"next_dialogue_tag": "baker_text_2"
+  }
+]
+
   }
   

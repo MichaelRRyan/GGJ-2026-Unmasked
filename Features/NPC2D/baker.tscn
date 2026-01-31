@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://id31mliym4rf"]
+
+[ext_resource type="Texture2D" uid="uid://b1xx6bpatuktv" path="res://Assets/Images/Baker/baker.png" id="1_146jl"]
+[ext_resource type="Script" uid="uid://di8w7ft81wfff" path="res://Features/NPC2D/baker.gd" id="1_bohmv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bohmv"]
+radius = 19.0
+height = 108.0
+
+[node name="baker" type="Area2D" unique_id=293219293]
+script = ExtResource("1_bohmv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=490486059]
+texture = ExtResource("1_146jl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1943584710]
+position = Vector2(-28, 7)
+shape = SubResource("CapsuleShape2D_bohmv")

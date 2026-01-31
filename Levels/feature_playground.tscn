@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cnaobu41hshdd" path="res://Features/NPC2D/npc.tscn" id="7_xrgqn"]
 [ext_resource type="PackedScene" uid="uid://b8fsld12ehyuk" path="res://Features/ClickableProps2D/Sound/sound.tscn" id="8_jmebr"]
 [ext_resource type="PackedScene" uid="uid://b2k7hh86cttit" path="res://Features/ClickableProps2D/Key/key.tscn" id="9_oh2co"]
+[ext_resource type="PackedScene" uid="uid://id31mliym4rf" path="res://Features/NPC2D/baker.tscn" id="10_ji208"]
 
 [node name="FeaturePlayground" type="Node2D" unique_id=1510965746]
 
@@ -61,8 +62,13 @@ position = Vector2(1118.0001, 547.99994)
 rotation = 1.1545122
 scale = Vector2(0.16921681, 0.18784751)
 
+[node name="baker" parent="Entities" unique_id=293219293 instance=ExtResource("10_ji208")]
+position = Vector2(-390.00003, 409)
+scale = Vector2(5.2021804, 4.463281)
+
 [connection signal="cabinet_closed" from="Entities/Cabinet" to="Entities/Key" method="_hide"]
 [connection signal="cabinet_opened" from="Entities/Cabinet" to="Entities/Key" method="_show"]
 [connection signal="npc_clicked" from="Entities/NPC" to="Systems/DialogueController" method="show_dialogue"]
 [connection signal="mouse_entered" from="Entities/Key" to="Entities/Key" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Entities/Key" to="Entities/Key" method="_on_mouse_exited"]
+[connection signal="npc_clicked" from="Entities/baker" to="Systems/DialogueController" method="show_dialogue"]
