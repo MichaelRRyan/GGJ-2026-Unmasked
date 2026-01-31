@@ -13,7 +13,6 @@ grow_vertical = 2
 size_flags_vertical = 8
 theme = ExtResource("1_3ga2s")
 script = ExtResource("1_h7sxu")
-dialogue_picker_node = NodePath("../../Systems/DialoguePicker")
 
 [node name="Background" type="ColorRect" parent="." unique_id=816833173]
 layout_mode = 1
@@ -30,20 +29,21 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 55.848022
-offset_top = -144.0
-offset_right = -47.0
+offset_left = 25.0
+offset_top = -164.0
+offset_right = -324.0
 offset_bottom = -26.0
 grow_horizontal = 2
 grow_vertical = 0
 
 [node name="Label" type="Label" parent="ColorRect" unique_id=1129307815]
 layout_mode = 0
-offset_left = 29.0
-offset_top = 21.0
-offset_right = 832.152
-offset_bottom = 105.0
-text = "Test"
+offset_left = 18.151978
+offset_top = 18.0
+offset_right = 594.0
+offset_bottom = 122.0
+text = "Test aaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaa aaaaaaa  aaaa aaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaa aaaaaaa"
+autowrap_mode = 3
 
 [node name="DialogueOptions" type="VBoxContainer" parent="." unique_id=1109674068]
 layout_mode = 1
@@ -52,11 +52,12 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -294.4167
-offset_top = -335.0
-offset_right = -24.0
-offset_bottom = -170.0
+offset_left = -299.0
+offset_top = -165.0
+offset_right = -23.0
+offset_bottom = -27.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_constants/separation = 10
+alignment = 2
 metadata/_edit_group_ = true
