@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ov1aiin7px3v"]
+
+[ext_resource type="PackedScene" uid="uid://p8me13tpt1is" path="res://Levels/level_base.tscn" id="1_8f625"]
+[ext_resource type="PackedScene" uid="uid://cja4dwr4nk8gf" path="res://Features/Door2D/door.tscn" id="2_4g6np"]
+[ext_resource type="Texture2D" uid="uid://bvsoecitydr5t" path="res://icon.svg" id="3_evqny"]
+
+[node name="LevelBase" unique_id=391544845 instance=ExtResource("1_8f625")]
+
+[node name="Label" type="Label" parent="Entities" parent_id_path=PackedInt32Array(721033671) index="0" unique_id=1220357041]
+offset_left = -44.0
+offset_top = -94.0
+offset_right = 44.0
+offset_bottom = -71.0
+text = "Wizard Tent"
+
+[node name="Door" parent="Entities" parent_id_path=PackedInt32Array(721033671) index="1" unique_id=702500341 instance=ExtResource("2_4g6np")]
+position = Vector2(-140, 50)
+scene = "res://Levels/level_overworld.tscn"
+
+[node name="Sprite2D2" type="Sprite2D" parent="Entities/Door" index="2" unique_id=1723104371]
+texture = ExtResource("3_evqny")

@@ -14,7 +14,7 @@
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1460549941]
 position = Vector2(551, 323)
-zoom = Vector2(0.6, 0.6)
+zoom = Vector2(0.5, 0.5)
 
 [node name="DialogueUI" type="CanvasLayer" parent="." unique_id=865840332]
 

@@ -14,15 +14,21 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="GGJ 2026 - Unmasked"
-run/main_scene="uid://bmx8kav4724ah"
+config/name="Unmasked"
+run/main_scene="uid://b1j34pv3aff8q"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+DialogueController="*uid://dci6pxoc448n6"
+EntityStateManager="*uid://c3uhw1nt66w2c"
+GameEventTracker="*uid://ctb34q23cvkgp"
+
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
+window/size/viewport_width=960
+window/size/viewport_height=540
 window/size/mode=2
 window/stretch/mode="canvas_items"
 

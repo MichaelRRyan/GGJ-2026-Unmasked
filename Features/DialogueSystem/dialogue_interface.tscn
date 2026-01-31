@@ -24,24 +24,26 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.41568628)
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=838013360]
+[node name="ColorRect" type="Panel" parent="." unique_id=2026748571]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -146.0
+offset_left = 55.848022
+offset_top = -144.0
+offset_right = -47.0
+offset_bottom = -26.0
 grow_horizontal = 2
 grow_vertical = 0
-color = Color(0, 0, 0, 0.45882353)
 
 [node name="Label" type="Label" parent="ColorRect" unique_id=1129307815]
 layout_mode = 0
-offset_left = 32.0
-offset_top = 30.0
-offset_right = 1126.0
-offset_bottom = 122.0
-text = "Teest"
+offset_left = 29.0
+offset_top = 21.0
+offset_right = 832.152
+offset_bottom = 105.0
+text = "Test"
 
 [node name="DialogueOptions" type="VBoxContainer" parent="." unique_id=1109674068]
 layout_mode = 1
@@ -50,8 +52,8 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -319.0
-offset_top = -350.0
+offset_left = -294.4167
+offset_top = -335.0
 offset_right = -24.0
 offset_bottom = -170.0
 grow_horizontal = 0
