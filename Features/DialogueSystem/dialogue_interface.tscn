@@ -2,7 +2,6 @@
 
 [ext_resource type="Theme" uid="uid://cmr35qfsqipuf" path="res://Assets/Themes/dialogue_interface.tres" id="1_3ga2s"]
 [ext_resource type="Script" uid="uid://bd1hg2wl7vd4g" path="res://Features/DialogueSystem/dialogue_interface.gd" id="1_h7sxu"]
-[ext_resource type="PackedScene" uid="uid://2onvsnnmxmu4" path="res://Features/DialogueSystem/dialogue_option.tscn" id="3_3ga2s"]
 
 [node name="DialogueInterface" type="Control" unique_id=1998899371]
 layout_mode = 3
@@ -61,6 +60,3 @@ grow_horizontal = 0
 grow_vertical = 0
 theme_override_constants/separation = 10
 metadata/_edit_group_ = true
-
-[node name="Option1" parent="DialogueOptions" unique_id=2063076733 instance=ExtResource("3_3ga2s")]
-layout_mode = 2
