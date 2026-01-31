@@ -4,6 +4,10 @@
 
 [node name="LevelBase" type="Node2D" unique_id=391544845]
 
+[node name="Background" type="Sprite2D" parent="." unique_id=2026553354]
+z_index = -1
+texture_filter = 1
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2019926313]
 zoom = Vector2(2, 2)
 

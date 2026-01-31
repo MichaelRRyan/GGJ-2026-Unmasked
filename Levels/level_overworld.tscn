@@ -19,8 +19,8 @@ scale = Vector2(0.16835107, 0.2449114)
 scene = "res://Levels/level_bar.tscn"
 
 [node name="BakeryDoor" parent="Entities" parent_id_path=PackedInt32Array(721033671) index="1" unique_id=1574683026 instance=ExtResource("4_1c2q3")]
-position = Vector2(-160.00002, 73)
-scale = Vector2(0.19999877, 0.39999938)
+position = Vector2(-161, 77.00001)
+scale = Vector2(0.17762905, 0.31694964)
 scene = "res://Levels/level_bakery.tscn"
 
 [node name="FarmhouseDoor" parent="Entities" parent_id_path=PackedInt32Array(721033671) index="2" unique_id=992986334 instance=ExtResource("4_1c2q3")]
