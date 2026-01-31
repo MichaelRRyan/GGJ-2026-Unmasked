@@ -70,18 +70,142 @@
 		"next_dialogue_tag": "person_text_3"
 	  }
 	],
-	"baker_text_1": [
+
+
+
+"baker_text_1": [
   {
 	"conditions": [],
-	"text": "Fresh bread just came out of the oven!",
-	"next_dialogue_tag": "baker_text_2"
+	"text": "Ah, hola amigo… I’m testing a new receta today. Smells okay, no?",
+	"responses": [
+	  {
+		"text": "Yeah, it smells really good.",
+		"next_dialogue_tag": "baker_routine_good"
+	  },
+	  {
+		"text": "Honestly… it smells a bit strange.",
+		"next_dialogue_tag": "baker_routine_strange"
+	  }
+	]
   }
 ],
-	"baker_text_2": [
+
+"baker_routine_good": [
   {
 	"conditions": [],
-	"text": "Careful, it's still warm.",
-	"next_dialogue_tag": "baker_text_2"
+	"text": "Heh, gracias. Maybe I’m improving, sí.",
+	"responses": [
+	  {
+		"text": "You bake here all the time?",
+		"next_dialogue_tag": "baker_every_day"
+	  },
+	  {
+		"text": "Does it ever get tiring?",
+		"next_dialogue_tag": "baker_tiring"
+	  }
+	]
+  }
+],
+
+"baker_routine_strange": [
+  {
+	"conditions": [],
+	"text": "Ay… yeah. Too much yeast, quizá. Still, I bake every day. Keeps the hands busy.",
+	"responses": [
+	  {
+		"text": "You bake here all the time?",
+		"next_dialogue_tag": "baker_every_day"
+	  },
+	  {
+		"text": "Does it ever get tiring?",
+		"next_dialogue_tag": "baker_tiring"
+	  }
+	]
+  }
+],
+
+"baker_every_day": [
+  {
+	"conditions": [],
+	"text": "Every day. Morning to night. Routine is good.",
+	"responses": [
+	  {
+		"text": "Sounds like work helps you avoid thinking.",
+		"next_dialogue_tag": "baker_crack"
+	  },
+	]
+  }
+],
+
+"baker_tiring": [
+  {
+	"conditions": [],
+	"text": "Tiring? No… but quiet. Too quiet sometimes.",
+	"responses": [
+	  {
+		"text": "A lot of people hide inside routine.",
+		"next_dialogue_tag": "baker_talks"
+	  }
+	]
+  }
+],
+
+"baker_talks": [
+  {
+	"conditions": [],
+	"text": "When I stop baking.. my head gets loud.",
+	"responses": [
+	  {
+		"text": "That sounds lonely.",
+		"next_dialogue_tag": "baker_crack"
+	  },
+	  {
+		"text": "What do you hear when it gets loud?",
+		"next_dialogue_tag": "baker_talks_more"
+	  }
+	]
+  }
+],
+
+
+"baker_talks_more": [
+  {
+	"conditions": [],
+	"text": "I hear that if I’m not useful… I’m nothing.",
+	"responses": [
+	  {
+		"text": "You don’t stop being someone when you rest.",
+		"next_dialogue_tag": "baker_mask_removed"
+	  }
+	]
+  }
+],
+
+
+"baker_mask_removed": [
+  {
+	"conditions": [],
+	"text": "Remove Mask",
+	"responses": [
+	  {
+		"text": "Remove Mask.",
+		"next_dialogue_tag": "baker_ending"
+	  }
+	]
+  }
+],
+
+"baker_crack": [
+  {
+	"conditions": [],
+	"text": "…Sí. Maybe that’s true. When I stop baking… my head gets loud.",
+  }
+],
+
+"baker_ending": [
+  {
+	"conditions": [],
+	"text": "…Gracias. I think I knew that. I just never said it out loud."
   }
 ]
 
