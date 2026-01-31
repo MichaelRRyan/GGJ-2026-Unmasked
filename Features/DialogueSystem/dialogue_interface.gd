@@ -6,6 +6,8 @@ class_name DialogueInterface
 
 @onready var picker: DialoguePicker = get_node(dialogue_picker_node)
 
+var ResponseOptionScene = preload("res://Features/DialogueSystem/dialogue_option.tscn")
+
 
 ## Sets the interface to hidden on game start.
 #-------------------------------------------------------------------------------
@@ -26,19 +28,24 @@ func _display_dialogue(dialogue_data: DialogueData) -> void:
 	if dialogue_data:
 		$ColorRect/Label.text = dialogue_data.text
 		
+		# Display dialogue options as buttons.
+		if not dialogue_data.responses.is_empty():
+			for i in dialogue_data.responses.size():
+				var optionScene : Button = ResponseOptionScene.instantiate()
+				optionScene.text = dialogue_data.responses[i].text
+				optionScene.connect("pressed", _option_selected.bind(i))
+				$DialogueOptions.add_child(optionScene)
+				
+		# Else display a "Continue..." button,
+		else:
+			var optionScene : Button = ResponseOptionScene.instantiate()
+			optionScene.text = "Continue..."
+			optionScene.connect("pressed", _on_continue_pressed)
+			$DialogueOptions.add_child(optionScene)
+		
+		# Optionally fade out dialogue after a delay.
 		if use_fade_timer:
 			$FadeTimer.start()
-
-
-#-------------------------------------------------------------------------------
-func _on_option_1_pressed():
-	_option_selected(0)
-	
-func _on_option_2_pressed():
-	_option_selected(1)
-	
-func _on_option_3_pressed():
-	_option_selected(2)
 
 
 #-------------------------------------------------------------------------------
@@ -46,11 +53,24 @@ func _on_option_3_pressed():
 # 	If the controller returns text, displays a new message.
 # 	Otherwise, hides the UI.
 func _option_selected(option_no : int) -> void:
+	# Delete all the response options.
+	for child in $DialogueOptions.get_children():
+		child.queue_free()
+	
 	var dialogue_data : DialogueData = picker.option_selected(option_no)
 	if dialogue_data != null:
 		_display_dialogue(dialogue_data)
 	else:
 		visible = false
+
+
+#-------------------------------------------------------------------------------
+func _on_continue_pressed():
+	# Delete all the response options.
+	for child in $DialogueOptions.get_children():
+		child.queue_free()
+	
+	visible = false
 
 
 #-------------------------------------------------------------------------------

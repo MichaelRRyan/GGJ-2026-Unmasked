@@ -2,7 +2,6 @@
 
 [ext_resource type="Theme" uid="uid://cmr35qfsqipuf" path="res://Assets/Themes/dialogue_interface.tres" id="1_3ga2s"]
 [ext_resource type="Script" uid="uid://bd1hg2wl7vd4g" path="res://Features/DialogueSystem/dialogue_interface.gd" id="1_h7sxu"]
-[ext_resource type="PackedScene" uid="uid://2onvsnnmxmu4" path="res://Features/DialogueSystem/dialogue_option.tscn" id="3_jdted"]
 
 [node name="DialogueInterface" type="Control" unique_id=1998899371]
 layout_mode = 3
@@ -64,18 +63,4 @@ grow_vertical = 0
 theme_override_constants/separation = 10
 metadata/_edit_group_ = true
 
-[node name="Option1" parent="DialogueOptions" unique_id=565408890 instance=ExtResource("3_jdted")]
-layout_mode = 2
-
-[node name="Option2" parent="DialogueOptions" unique_id=166360073 instance=ExtResource("3_jdted")]
-layout_mode = 2
-text = "I agree with you completely"
-
-[node name="Option3" parent="DialogueOptions" unique_id=528325523 instance=ExtResource("3_jdted")]
-layout_mode = 2
-text = "Can i have a tall latte please"
-
 [connection signal="timeout" from="FadeTimer" to="." method="_on_fade_timer_timeout"]
-[connection signal="pressed" from="DialogueOptions/Option1" to="." method="_on_option_1_pressed"]
-[connection signal="pressed" from="DialogueOptions/Option2" to="." method="_on_option_2_pressed"]
-[connection signal="pressed" from="DialogueOptions/Option3" to="." method="_on_option_3_pressed"]

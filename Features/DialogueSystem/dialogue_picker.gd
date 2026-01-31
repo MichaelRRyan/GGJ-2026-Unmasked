@@ -53,6 +53,7 @@ func _select_dialogue(entity_tag: String) -> DialogueData:
 		
 		if _matches(conditions, game_tags):
 			_current_dialogue = DialogueData.new(entry)
+			npc_state_manager.set_next_dialogue_tag(_current_npc_tag, _current_dialogue.next_dialogue_tag)
 			return _current_dialogue
 			
 	return null  ## fallback
@@ -61,8 +62,8 @@ func _select_dialogue(entity_tag: String) -> DialogueData:
 #---------------------------------------------------------------------------------------------------
 func option_selected(option_no : int) -> DialogueData:
 	if option_no < _current_dialogue.responses.size():
-		var response : Dictionary = _current_dialogue.responses[option_no]
-		var next_dialogue_tag : String = response.get("next_dialogue_tag", "")
+		var response : DialogueData = _current_dialogue.responses[option_no]
+		var next_dialogue_tag : String = response.next_dialogue_tag
 				
 		# Retrieve and set the next dialogue for this NPC based on the chosen dialogue.
 		npc_state_manager.set_next_dialogue_tag(_current_npc_tag, next_dialogue_tag)
