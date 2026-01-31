@@ -1,5 +1,5 @@
 [gd_scene format=3 uid="uid://2onvsnnmxmu4"]
 
-[node name="Option1" type="Button"]
+[node name="Option1" type="Button" unique_id=629797611]
 size_flags_vertical = 3
 text = "Your are very wrong"

@@ -54,7 +54,7 @@ func _option_selected(option_no : int) -> void:
 	
 	var dialogue_data : DialogueData = picker.option_selected(option_no)
 	if dialogue_data != null:
-		_display_dialogue(dialogue_data)
+		call_deferred("_display_dialogue", dialogue_data)
 	else:
 		visible = false
 

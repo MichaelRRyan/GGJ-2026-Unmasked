@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ckkxw1vk768ek"]
+
+[ext_resource type="Script" uid="uid://b8y6k8dt3bkyb" path="res://Features/NPC2D/npc2d.gd" id="1_salo4"]
+[ext_resource type="Texture2D" uid="uid://coag1seqohda6" path="res://Assets/Images/Nun/nun.png" id="2_salo4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wcxq7"]
+radius = 15.0
+height = 78.0
+
+[node name="Nun" type="Area2D" unique_id=2110108148]
+script = ExtResource("1_salo4")
+npc_tag = "nun"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=230860160]
+texture_filter = 1
+texture = ExtResource("2_salo4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1138707699]
+position = Vector2(5, 17)
+shape = SubResource("CapsuleShape2D_wcxq7")

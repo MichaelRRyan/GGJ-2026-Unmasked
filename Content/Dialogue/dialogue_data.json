@@ -69,6 +69,37 @@
 		"text": "You've expended all my dialogue",
 		"next_dialogue_tag": "person_text_3"
 	  }
+	],
+	"nun_0": [
+	{
+		"conditions": [],
+		"text": "Hello my child. What troubles you?",
+		"next_dialogue_tag": "nun_0",
+		"responses": [
+			{
+				"text": "Hello, how are you keeping?",
+				"next_dialogue_tag": "nun_howareyou"
+			},
+			{
+				"text": "Hello, I've just moved here, what can you tell me about this town?",
+				"next_dialogue_tag": "nun_whatofthistown"
+			}
+		]
+	}
+	],
+	"nun_howareyou": [
+		{
+		"conditions": [],
+		"text": "Oh I'm okay don't you worry about me...",
+		"next_dialogue_tag": "nun_0"
+		}
+	],
+	"nun_whatofthistown": [
+		{
+		"conditions": [],
+		"text": "Oh well a very warm welcome to you! This town is a lovely place, though it's been odd lately...",
+		"next_dialogue_tag": "nun_0"
+		}
 	]
-  }
+}
   

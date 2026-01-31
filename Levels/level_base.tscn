@@ -9,8 +9,6 @@
 [node name="LevelBase" type="Node2D" unique_id=391544845]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2019926313]
-position = Vector2(551, 323)
-zoom = Vector2(0.6, 0.6)
 
 [node name="DialogueUI" type="CanvasLayer" parent="." unique_id=1577558631]
 
