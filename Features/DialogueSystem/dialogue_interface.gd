@@ -53,3 +53,11 @@ func _option_selected(option_no : int) -> void:
 #-------------------------------------------------------------------------------
 func _on_fade_timer_timeout():
 	visible = false
+
+
+func _on_key_mouse_entered() -> void:
+	pass # Replace with function body.
+
+
+func _on_key_mouse_exited() -> void:
+	pass # Replace with function body.
