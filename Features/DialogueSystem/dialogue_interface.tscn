@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://bd00x3ncr240f"]
+[gd_scene format=3 uid="uid://bd00x3ncr240f"]
 
 [ext_resource type="Theme" uid="uid://cmr35qfsqipuf" path="res://Assets/Themes/dialogue_interface.tres" id="1_3ga2s"]
 [ext_resource type="Script" uid="uid://bd1hg2wl7vd4g" path="res://Features/DialogueSystem/dialogue_interface.gd" id="1_h7sxu"]
 [ext_resource type="PackedScene" uid="uid://2onvsnnmxmu4" path="res://Features/DialogueSystem/dialogue_option.tscn" id="3_jdted"]
 
-[node name="DialogueInterface" type="Control"]
+[node name="DialogueInterface" type="Control" unique_id=1998899371]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -16,7 +16,7 @@ theme = ExtResource("1_3ga2s")
 script = ExtResource("1_h7sxu")
 dialogue_picker_node = NodePath("../../Systems/DialoguePicker")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=816833173]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -25,7 +25,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.41568628)
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=838013360]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -36,7 +36,7 @@ grow_horizontal = 2
 grow_vertical = 0
 color = Color(0, 0, 0, 0.45882353)
 
-[node name="Label" type="Label" parent="ColorRect"]
+[node name="Label" type="Label" parent="ColorRect" unique_id=1129307815]
 layout_mode = 0
 offset_left = 32.0
 offset_top = 30.0
@@ -44,11 +44,11 @@ offset_right = 1126.0
 offset_bottom = 122.0
 text = "Teest"
 
-[node name="FadeTimer" type="Timer" parent="."]
+[node name="FadeTimer" type="Timer" parent="." unique_id=1828489986]
 wait_time = 3.0
 one_shot = true
 
-[node name="DialogueOptions" type="VBoxContainer" parent="."]
+[node name="DialogueOptions" type="VBoxContainer" parent="." unique_id=1109674068]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -64,14 +64,14 @@ grow_vertical = 0
 theme_override_constants/separation = 10
 metadata/_edit_group_ = true
 
-[node name="Option1" parent="DialogueOptions" instance=ExtResource("3_jdted")]
+[node name="Option1" parent="DialogueOptions" unique_id=565408890 instance=ExtResource("3_jdted")]
 layout_mode = 2
 
-[node name="Option2" parent="DialogueOptions" instance=ExtResource("3_jdted")]
+[node name="Option2" parent="DialogueOptions" unique_id=166360073 instance=ExtResource("3_jdted")]
 layout_mode = 2
 text = "I agree with you completely"
 
-[node name="Option3" parent="DialogueOptions" instance=ExtResource("3_jdted")]
+[node name="Option3" parent="DialogueOptions" unique_id=528325523 instance=ExtResource("3_jdted")]
 layout_mode = 2
 text = "Can i have a tall latte please"
 

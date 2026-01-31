@@ -1,7 +1,7 @@
 extends Clickable
 class_name NPC2D
 
-signal npc_clicked(npc_tag)
+signal npc_clicked(npc_tag : String)
 
 
 @export var npc_tag : String = "guy"

@@ -1,62 +1,62 @@
 {
   "cabinet_opened0": [
-    {
-      "conditions": [],
-      "text": "So the cabinet opens..."
-    }
+	{
+	  "conditions": [],
+	  "text": "So the cabinet opens..."
+	}
   ],
   "cabinet_opened1": [
-    {
-      "conditions": [],
-      "text": "And it opens again"
-    }
+	{
+	  "conditions": [],
+	  "text": "And it opens again"
+	}
   ],
   "cabinet_opened2": [
-    {
-      "conditions": [],
-      "text": "I actually don't know why I assumed it wouldn't open"
-    }
+	{
+	  "conditions": [],
+	  "text": "I actually don't know why I assumed it wouldn't open"
+	}
   ],
   "sample": [
-    {
-      "conditions": ["is_thirsty"],
-      "text": "I'm feeling quite parched today... Could you bring me some water?",
-      "next_dialogue_tag": "person_text_2"
-    },
-    {
-      "conditions": ["is_happy"],
-      "text": "The garden feels wonderful today! Thank you for cheering me up!",
-      "next_dialogue_tag": "person_text_2"
-    },
-    {
-      "conditions": ["!is_thirsty", "!is_happy"],
-      "text": "Just another lovely day blooming in the garden.",
-      "next_dialogue_tag": "person_text_2"
-    },
-    {
-      "conditions": [],
-      "text": "Have you noticed how much we've grown?",
-      "next_dialogue_tag": "person_text_2"
-    }
+	{
+	  "conditions": ["is_thirsty"],
+	  "text": "I'm feeling quite parched today... Could you bring me some water?",
+	  "next_dialogue_tag": "person_text_2"
+	},
+	{
+	  "conditions": ["is_happy"],
+	  "text": "The garden feels wonderful today! Thank you for cheering me up!",
+	  "next_dialogue_tag": "person_text_2"
+	},
+	{
+	  "conditions": ["!is_thirsty", "!is_happy"],
+	  "text": "Just another lovely day blooming in the garden.",
+	  "next_dialogue_tag": "person_text_2"
+	},
+	{
+	  "conditions": [],
+	  "text": "Have you noticed how much we've grown?",
+	  "next_dialogue_tag": "person_text_2"
+	}
   ],
   "person_text_1": [
-    {
-      "conditions": [],
-      "text": "This is my first line of dialogue",
-      "next_dialogue_tag": "person_text_2",
-      "options": [
-        {
-          "text": "My first response",
-          "next_dialogue_tag": "person_text_2"
-        }
-      ]
-    }
+	{
+	  "conditions": [],
+	  "text": "This is my first line of dialogue",
+	  "next_dialogue_tag": "person_text_2",
+	  "responses": [
+		{
+		  "text": "My first response",
+		  "next_dialogue_tag": "person_text_2"
+		}
+	  ]
+	}
   ],
   "person_text_2": [
-    {
-      "conditions": [],
-      "text": "This is my second line",
-      "next_dialogue_tag": "person_text_1"
-    }
+	{
+	  "conditions": [],
+	  "text": "This is my second line",
+	  "next_dialogue_tag": "person_text_1"
+	}
   ]
 }
