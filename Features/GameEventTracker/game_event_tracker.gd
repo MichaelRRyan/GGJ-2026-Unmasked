@@ -1,7 +1,6 @@
 extends Node
 
-signal event_tag_added(game_tag : String)
-
+@onready var intro_played = false
 
 #---------------------------------------------------------------------------------------------------
 ## Stores game-wide flags.
@@ -14,7 +13,6 @@ func activate_event(tag: String) -> void:
 	# Activate a game-wide event or tag.
 	if not _game_flags.has(tag):
 		_game_flags.push_back(tag)
-		event_tag_added.emit(tag)
 		print("Game tag added [" + tag + "]")
 	else:
 		print("Game tag not added [" + tag + "] - Already active")
