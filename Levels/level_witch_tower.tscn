@@ -1,17 +1,20 @@
-[gd_scene format=3 uid="uid://b1mhvg63jgb6h"]
+[gd_scene format=3 uid="uid://cy4rona3j5l5u"]
 
 [ext_resource type="PackedScene" uid="uid://p8me13tpt1is" path="res://Levels/level_base.tscn" id="1_rguvn"]
+[ext_resource type="Theme" uid="uid://cmr35qfsqipuf" path="res://Assets/Themes/dialogue_interface.tres" id="2_k6qm3"]
 [ext_resource type="PackedScene" uid="uid://cja4dwr4nk8gf" path="res://Features/Door2D/door.tscn" id="2_un0hn"]
 [ext_resource type="Texture2D" uid="uid://bvsoecitydr5t" path="res://icon.svg" id="3_k6qm3"]
-[ext_resource type="PackedScene" uid="uid://fe7xw5jasgfn" path="res://Features/NPC2D/npc_witch.tscn" id="4_k6qm3"]
+[ext_resource type="PackedScene" uid="uid://g0bcgcv4nxpn" path="res://Features/NPC2D/witch.tscn" id="5_fl41p"]
 
 [node name="LevelBase" unique_id=391544845 instance=ExtResource("1_rguvn")]
 
 [node name="Label" type="Label" parent="Entities" parent_id_path=PackedInt32Array(721033671) index="0" unique_id=77922241]
-offset_left = -44.0
+offset_left = -57.0
 offset_top = -94.0
-offset_right = 44.0
-offset_bottom = -71.0
+offset_right = 57.0
+offset_bottom = -70.0
+theme = ExtResource("2_k6qm3")
+theme_override_colors/font_color = Color(0.7882353, 0.7294118, 0.5254902, 1)
 text = "Witch Tower"
 
 [node name="Door" parent="Entities" parent_id_path=PackedInt32Array(721033671) index="1" unique_id=702500341 instance=ExtResource("2_un0hn")]
@@ -21,5 +24,6 @@ scene = "res://Levels/level_overworld.tscn"
 [node name="Sprite2D2" type="Sprite2D" parent="Entities/Door" index="2" unique_id=1721162785]
 texture = ExtResource("3_k6qm3")
 
-[node name="NPC" parent="Entities" parent_id_path=PackedInt32Array(721033671) index="2" unique_id=2110108148 instance=ExtResource("4_k6qm3")]
-position = Vector2(72, 25)
+[node name="Witch" parent="." index="3" unique_id=2110108148 instance=ExtResource("5_fl41p")]
+position = Vector2(81, -4)
+scale = Vector2(1.4, 1.4)

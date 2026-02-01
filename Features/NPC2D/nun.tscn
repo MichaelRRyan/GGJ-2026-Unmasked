@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://ckkxw1vk768ek"]
+[gd_scene format=3 uid="uid://ts4vpfkahnes"]
 
 [ext_resource type="Script" uid="uid://b8y6k8dt3bkyb" path="res://Features/NPC2D/npc2d.gd" id="1_salo4"]
 [ext_resource type="Texture2D" uid="uid://coag1seqohda6" path="res://Assets/Images/Nun/nun.png" id="2_salo4"]

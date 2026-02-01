@@ -8,9 +8,13 @@ var _game_flags: Array = []
 
 #---------------------------------------------------------------------------------------------------
 ## Activates a game event.
-func activate_event(flag: String) -> void:
+func activate_event(tag: String) -> void:
 	# Activate a game-wide event or tag.
-	_game_flags.push_back(flag)
+	if not _game_flags.has(tag):
+		_game_flags.push_back(tag)
+		print("Game tag added [" + tag + "]")
+	else:
+		print("Game tag not added [" + tag + "] - Already active")
 
 
 #---------------------------------------------------------------------------------------------------

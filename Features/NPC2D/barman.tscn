@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dvke5l0xh2d30"]
+
+[ext_resource type="Script" uid="uid://b8y6k8dt3bkyb" path="res://Features/NPC2D/npc2d.gd" id="1_yjuwv"]
+[ext_resource type="Texture2D" uid="uid://crb8ijn1cmgil" path="res://Assets/Images/Barman/barman.png" id="2_yjuwv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wcxq7"]
+radius = 29.0
+height = 106.0
+
+[node name="Barman" type="Area2D" unique_id=2110108148]
+script = ExtResource("1_yjuwv")
+npc_tag = "barman"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=230860160]
+texture_filter = 1
+texture = ExtResource("2_yjuwv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1138707699]
+position = Vector2(1, 5)
+shape = SubResource("CapsuleShape2D_wcxq7")
