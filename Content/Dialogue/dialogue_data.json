@@ -107,6 +107,163 @@
 		"text": "Witch text...",
 		"next_dialogue_tag": "witch_0"
 		}
+	],
+
+	"baker_text_1": [
+  {
+	"conditions": [],
+	"text": "Ah, hola amigo… I’m testing a new receta today. Smells okay, no?",
+	"responses": [
+	  {
+		"text": "Yeah, it smells really good.",
+		"next_dialogue_tag": "baker_routine_good"
+	  },
+	  {
+		"text": "Honestly… it smells a bit strange.",
+		"next_dialogue_tag": "baker_routine_strange"
+	  }
 	]
+  }
+],
+
+"baker_routine_good": [
+  {
+	"conditions": [],
+	"text": "Heh, gracias. Maybe I’m improving, sí. Baking is baking.",
+	"responses": [
+	  {
+		"text": "You bake here all the time?",
+		"next_dialogue_tag": "baker_routine"
+	  },
+	  {
+		"text": "Does it ever get tiring?",
+		"next_dialogue_tag": "baker_routine"
+	  }
+	]
+  }
+],
+
+"baker_routine_strange": [
+  {
+	"conditions": [],
+	"text": "Ay… yeah. Too much yeast, quizá. Still, baking is baking.",
+	"responses": [
+	  {
+		"text": "You bake here all the time?",
+		"next_dialogue_tag": "baker_routine"
+	  },
+	  {
+		"text": "Does it ever get tiring?",
+		"next_dialogue_tag": "baker_routine"
+	  }
+	]
+  }
+],
+
+"baker_routine": [
+  {
+	"conditions": [],
+	"text": "Every day. Morning to night. Routine is good. Keeps the hands busy.",
+	"responses": [
+	  {
+		"text": "Sounds like work helps you avoid thinking.",
+		"next_dialogue_tag": "baker_reflection"
+	  },
+	  {
+		"text": "A lot of people hide inside routine.",
+		"next_dialogue_tag": "baker_reflection"
+	  }
+	]
+  }
+],
+
+"baker_reflection": [
+  {
+	"conditions": [],
+	"text": "…Sí. Maybe that’s true.",
+	"responses": [
+	  {
+		"text": "What happens when you stop?",
+		"next_dialogue_tag": "baker_inner_noise"
+	  },
+	  {
+		"text": "That doesn’t sound very healthy.",
+		"next_dialogue_tag": "baker_close_up"
+	  }
+	]
+  }
+],
+
+"baker_close_up": [
+  {
+	"conditions": [],
+	"text": "Maybe. I don’t know. The bread needs watching.",
+	"responses": [
+	  {
+		"text": "Sorry, I didn’t mean to push.",
+		"next_dialogue_tag": "baker_routine"
+	  },
+	  {
+		"text": "I’ll let you work.",
+		"next_dialogue_tag": "baker_routine"
+	  }
+	]
+  }
+],
+
+"baker_inner_noise": [
+  {
+	"conditions": [],
+	"text": "When I stop baking… my head gets loud.",
+	"responses": [
+	  {
+		"text": "That sounds lonely.",
+		"next_dialogue_tag": "baker_core_path"
+	  },
+	  {
+		"text": "What do you hear when it gets loud?",
+		"next_dialogue_tag": "baker_core_path"
+	  }
+	]
+  }
+],
+
+"baker_core_path": [
+  {
+	"conditions": [],
+	"text": "I hear that if I’m not useful… I’m nothing.",
+	"responses": [
+	  {
+		"text": "You don’t stop being someone when you rest.",
+		"next_dialogue_tag": "baker_mask_removed"
+	  },
+	  {
+		"text": "That’s not true, you just need confidence.",
+		"next_dialogue_tag": "baker_close_up"
+	  }
+	]
+  }
+],
+
+"baker_mask_removed": [
+  {
+	"conditions": [],
+	"text": "He exhales slowly, shoulders lowering.",
+	"responses": [
+	  {
+		"text": "Stay quiet with him.",
+		"next_dialogue_tag": "baker_ending"
+	  }
+	]
+  }
+],
+
+"baker_ending": [
+  {
+	"conditions": [],
+	"text": "…Gracias. I think I knew that. I just never said it out loud."
+  }
+]
+
 }
   

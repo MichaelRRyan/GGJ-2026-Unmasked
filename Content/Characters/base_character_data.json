@@ -7,5 +7,8 @@
 	},
 	"witch": {
 		"next_dialogue_tag": "witch_0"
-	}
+	},
+	"baker": {
+		"next_dialogue_tag": "baker_text_1"
+  	}
 }
