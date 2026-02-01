@@ -36,18 +36,38 @@ func set_field(npc_tag: String, field_name: String, value) -> void:
 	_state_data[npc_tag][field_name] = value
 
 
+## Sets a state variable for an NPC.
+func add_tag(entity_tag: String, tag: String) -> void:
+	if not _state_data.has(entity_tag):
+		_state_data[entity_tag] = {}
+	
+	if _state_data[entity_tag].has("raw_tags"):
+		if not _state_data[entity_tag]["raw_tags"].has(tag):
+			_state_data[entity_tag]["raw_tags"].append(tag)
+			print("Entity tag [" + tag + "] added to [" + entity_tag + "]")
+			
+		else: 
+			print("Entity tag [" + tag + "] not added to [" + entity_tag + "] - Already active")
+	else:
+		_state_data[entity_tag]["raw_tags"] = [tag]
+		print("Entity tag [" + tag + "] added to [" + entity_tag + "]")
+
+
 ## Retrieves a set of tags for an NPC by evaluating its state.
 func get_tags(npc_tag: String) -> Array:
-	
-	# Resolve NPC's state into a set of tags.
 	if not _state_data.has(npc_tag):
-		_state_data[npc_tag] = {}
-	var state : Dictionary = _state_data[npc_tag]
+		return []
+	return _resolve_tags(_state_data[npc_tag])
 
+
+func _resolve_tags(state : Dictionary) -> Array:
 	# Converts from values to parsable text tags (essentially booleans)
 	var tags := []
 	if state.get("is_thirsty", false):
 		tags.push_back("is_thirsty")
 	if state.get("affection_score", 0) > 5:
 		tags.push_back("is_happy")
+		
+	tags.append_array(state.get("raw_tags", []))
+	
 	return tags
