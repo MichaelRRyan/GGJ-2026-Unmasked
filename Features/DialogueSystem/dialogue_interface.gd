@@ -26,18 +26,30 @@ func _display_dialogue(dialogue_data: DialogueData) -> void:
 		
 		# Display dialogue options as buttons.
 		if not dialogue_data.responses.is_empty():
-			for i in dialogue_data.responses.size():
-				var optionScene : Button = ResponseOptionScene.instantiate()
-				optionScene.text = dialogue_data.responses[i].text
-				optionScene.connect("pressed", _option_selected.bind(i))
-				$DialogueOptions.add_child(optionScene)
-				
-		# Else display a "Continue..." button,
-		else:
-			var optionScene : Button = ResponseOptionScene.instantiate()
-			optionScene.text = "Continue..."
-			optionScene.connect("pressed", _on_continue_pressed)
-			$DialogueOptions.add_child(optionScene)
+			_add_response_options(dialogue_data.responses)
+		
+		else: # Else display a "Continue..." button,
+			_add_continue_button()
+	
+	else:
+		_add_continue_button()
+
+
+#-------------------------------------------------------------------------------
+func _add_response_options(responses : Array) -> void:
+	for i in responses.size():
+		var optionScene : Button = ResponseOptionScene.instantiate()
+		optionScene.text = responses[i].text
+		optionScene.connect("pressed", _option_selected.bind(i))
+		$DialogueOptions.add_child(optionScene)
+
+
+#-------------------------------------------------------------------------------
+func _add_continue_button() -> void:
+	var optionScene : Button = ResponseOptionScene.instantiate()
+	optionScene.text = "Continue..."
+	optionScene.connect("pressed", _on_continue_pressed)
+	$DialogueOptions.add_child(optionScene)
 
 
 #-------------------------------------------------------------------------------
