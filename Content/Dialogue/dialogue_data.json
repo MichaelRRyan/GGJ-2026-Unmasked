@@ -336,7 +336,7 @@
 	  {
 		"text": "Sounds like work helps you avoid thinking.",
 		"next_dialogue_tag": "baker_crack"
-	  },
+	  }
 	]
   }
 ],
@@ -530,7 +530,7 @@
 	"conditions": [],
 	"text": "He nods, already reaching for another glass. The bar hums on without you."
   }
-]
+],
 
 "intro_0" : [
 	{

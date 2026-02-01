@@ -14,6 +14,7 @@ func activate_event(tag: String) -> void:
 	# Activate a game-wide event or tag.
 	if not _game_flags.has(tag):
 		_game_flags.push_back(tag)
+		event_tag_added.emit(tag)
 		print("Game tag added [" + tag + "]")
 	else:
 		print("Game tag not added [" + tag + "] - Already active")
