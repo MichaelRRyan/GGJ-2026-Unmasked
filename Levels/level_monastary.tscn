@@ -1,17 +1,20 @@
-[gd_scene format=3 uid="uid://bp3d2mhxbhnuu"]
+[gd_scene format=3 uid="uid://cpdm7imynkbu2"]
 
 [ext_resource type="PackedScene" uid="uid://p8me13tpt1is" path="res://Levels/level_base.tscn" id="1_roojv"]
+[ext_resource type="Theme" uid="uid://cmr35qfsqipuf" path="res://Assets/Themes/dialogue_interface.tres" id="2_d3j0i"]
 [ext_resource type="PackedScene" uid="uid://cja4dwr4nk8gf" path="res://Features/Door2D/door.tscn" id="2_l5uru"]
 [ext_resource type="Texture2D" uid="uid://bvsoecitydr5t" path="res://icon.svg" id="3_uu0y2"]
-[ext_resource type="PackedScene" uid="uid://dalpwpnusxb0i" path="res://Features/NPC2D/nun.tscn" id="4_uu0y2"]
+[ext_resource type="PackedScene" uid="uid://ts4vpfkahnes" path="res://Features/NPC2D/nun.tscn" id="4_uu0y2"]
 
 [node name="LevelBase" unique_id=391544845 instance=ExtResource("1_roojv")]
 
 [node name="Label" type="Label" parent="Entities" parent_id_path=PackedInt32Array(721033671) index="0" unique_id=747994310]
-offset_left = -44.0
-offset_top = -94.0
-offset_right = 44.0
+offset_left = -52.0
+offset_top = -95.0
+offset_right = 52.0
 offset_bottom = -71.0
+theme = ExtResource("2_d3j0i")
+theme_override_colors/font_color = Color(0.7882353, 0.7294118, 0.5254902, 1)
 text = "Monastary"
 
 [node name="Door" parent="Entities" parent_id_path=PackedInt32Array(721033671) index="1" unique_id=702500341 instance=ExtResource("2_l5uru")]
@@ -22,4 +25,5 @@ scene = "res://Levels/level_overworld.tscn"
 texture = ExtResource("3_uu0y2")
 
 [node name="Nun" parent="Entities" parent_id_path=PackedInt32Array(721033671) index="2" unique_id=2110108148 instance=ExtResource("4_uu0y2")]
-position = Vector2(50, -3)
+position = Vector2(67, -13)
+scale = Vector2(1.2, 1.2)

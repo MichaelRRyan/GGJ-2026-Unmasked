@@ -42,7 +42,7 @@ offset_left = 18.151978
 offset_top = 18.0
 offset_right = 594.0
 offset_bottom = 122.0
-text = "Test aaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaa aaaaaaa  aaaa aaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaa aaaaaaa"
+text = "I don't have any dialogue"
 autowrap_mode = 3
 
 [node name="DialogueOptions" type="VBoxContainer" parent="." unique_id=1109674068]
