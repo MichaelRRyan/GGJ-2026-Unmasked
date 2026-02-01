@@ -109,7 +109,7 @@
 		}
 	],
 
-	"baker_text_1": [
+"baker_text_1": [
   {
 	"conditions": [],
 	"text": "Ah, hola amigo… I’m testing a new receta today. Smells okay, no?",
@@ -129,15 +129,15 @@
 "baker_routine_good": [
   {
 	"conditions": [],
-	"text": "Heh, gracias. Maybe I’m improving, sí. Baking is baking.",
+	"text": "Heh, gracias. Maybe I’m improving, sí.",
 	"responses": [
 	  {
 		"text": "You bake here all the time?",
-		"next_dialogue_tag": "baker_routine"
+		"next_dialogue_tag": "baker_every_day"
 	  },
 	  {
 		"text": "Does it ever get tiring?",
-		"next_dialogue_tag": "baker_routine"
+		"next_dialogue_tag": "baker_tiring"
 	  }
 	]
   }
@@ -146,89 +146,65 @@
 "baker_routine_strange": [
   {
 	"conditions": [],
-	"text": "Ay… yeah. Too much yeast, quizá. Still, baking is baking.",
+	"text": "Ay… yeah. Too much yeast, quizá. Still, I bake every day. Keeps the hands busy.",
 	"responses": [
 	  {
 		"text": "You bake here all the time?",
-		"next_dialogue_tag": "baker_routine"
+		"next_dialogue_tag": "baker_every_day"
 	  },
 	  {
 		"text": "Does it ever get tiring?",
-		"next_dialogue_tag": "baker_routine"
+		"next_dialogue_tag": "baker_tiring"
 	  }
 	]
   }
 ],
 
-"baker_routine": [
+"baker_every_day": [
   {
 	"conditions": [],
-	"text": "Every day. Morning to night. Routine is good. Keeps the hands busy.",
+	"text": "Every day. Morning to night. Routine is good.",
 	"responses": [
 	  {
 		"text": "Sounds like work helps you avoid thinking.",
-		"next_dialogue_tag": "baker_reflection"
+		"next_dialogue_tag": "baker_crack"
 	  },
+	]
+  }
+],
+
+"baker_tiring": [
+  {
+	"conditions": [],
+	"text": "Tiring? No… but quiet. Too quiet sometimes.",
+	"responses": [
 	  {
 		"text": "A lot of people hide inside routine.",
-		"next_dialogue_tag": "baker_reflection"
+		"next_dialogue_tag": "baker_talks"
 	  }
 	]
   }
 ],
 
-"baker_reflection": [
+"baker_talks": [
   {
 	"conditions": [],
-	"text": "…Sí. Maybe that’s true.",
-	"responses": [
-	  {
-		"text": "What happens when you stop?",
-		"next_dialogue_tag": "baker_inner_noise"
-	  },
-	  {
-		"text": "That doesn’t sound very healthy.",
-		"next_dialogue_tag": "baker_close_up"
-	  }
-	]
-  }
-],
-
-"baker_close_up": [
-  {
-	"conditions": [],
-	"text": "Maybe. I don’t know. The bread needs watching.",
-	"responses": [
-	  {
-		"text": "Sorry, I didn’t mean to push.",
-		"next_dialogue_tag": "baker_routine"
-	  },
-	  {
-		"text": "I’ll let you work.",
-		"next_dialogue_tag": "baker_routine"
-	  }
-	]
-  }
-],
-
-"baker_inner_noise": [
-  {
-	"conditions": [],
-	"text": "When I stop baking… my head gets loud.",
+	"text": "When I stop baking.. my head gets loud.",
 	"responses": [
 	  {
 		"text": "That sounds lonely.",
-		"next_dialogue_tag": "baker_core_path"
+		"next_dialogue_tag": "baker_crack"
 	  },
 	  {
 		"text": "What do you hear when it gets loud?",
-		"next_dialogue_tag": "baker_core_path"
+		"next_dialogue_tag": "baker_talks_more"
 	  }
 	]
   }
 ],
 
-"baker_core_path": [
+
+"baker_talks_more": [
   {
 	"conditions": [],
 	"text": "I hear that if I’m not useful… I’m nothing.",
@@ -236,25 +212,29 @@
 	  {
 		"text": "You don’t stop being someone when you rest.",
 		"next_dialogue_tag": "baker_mask_removed"
-	  },
-	  {
-		"text": "That’s not true, you just need confidence.",
-		"next_dialogue_tag": "baker_close_up"
 	  }
 	]
   }
 ],
 
+
 "baker_mask_removed": [
   {
 	"conditions": [],
-	"text": "He exhales slowly, shoulders lowering.",
+	"text": "Remove Mask",
 	"responses": [
 	  {
-		"text": "Stay quiet with him.",
+		"text": "Remove Mask.",
 		"next_dialogue_tag": "baker_ending"
 	  }
 	]
+  }
+],
+
+"baker_crack": [
+  {
+	"conditions": [],
+	"text": "…Sí. Maybe that’s true. When I stop baking… my head gets loud.",
   }
 ],
 
@@ -264,6 +244,7 @@
 	"text": "…Gracias. I think I knew that. I just never said it out loud."
   }
 ]
+
 
 }
   
