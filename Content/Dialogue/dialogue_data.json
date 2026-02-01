@@ -107,13 +107,181 @@
 		"next_dialogue_tag": "nun_0"
 		}
 	],
-	"witch_0": [
-		{
-		"conditions": [],
-		"text": "Witch text...",
-		"next_dialogue_tag": "witch_0"
-		}
-	],
+
+"witch_0": [
+  {
+	"conditions": [],
+	"text": "What, brings You here.  
+	Not ill are you, you could cure yourself I'm sure... ",
+	"responses": [
+	  {
+		"text": "Just wondering how your doing.",
+		"next_dialogue_tag": "witch_lonely"
+	  },
+	  {
+		"text": "what are you brewing in that cauldron",
+		"next_dialogue_tag": "witch_deflect"
+	  }
+	]
+  },
+{
+	"conditions": ["found_village_ailment"],
+	"text": "What, brings You here.  
+	Not ill are you, you could cure yourself I'm sure...  ",
+	"responses": [
+	  {
+		"text": "looks like something happened to this village
+do you know anything about it",
+		"next_dialogue_tag": "all_fine"
+	  }
+	]
+  }
+],
+
+"all_fine": [
+  {
+	"conditions": [],
+	"text": "Everyone seems fine to me, maybe even better than before. heehee ",
+	"responses": [
+	  {
+		"text": "I can tell somethings wrong with these people",
+		"next_dialogue_tag": "witch_cry"
+	  },
+	  {
+		"text": "have you been outside?",
+		"next_dialogue_tag": "witch_stays_home"
+	  }
+	]
+  }
+],
+
+"witch_cry": [
+  {
+	"conditions": [],
+	"text": "*Breaks into tears 
+	I only wanted to help...",
+	"responses": [
+	  {
+		"text": "Oh.. what do you mean?",
+		"next_dialogue_tag": "witch_talks_more"
+	  }
+	]
+  }
+],
+
+"witch_stays_home": [
+  {
+	"conditions": [],
+	"text": "not in a while, the villagers don't like me much",
+	"next_dialogue_tag": "witch_0"
+  }
+],
+
+"witch_talks_more": [
+  {
+	"conditions": [],
+	"text": "my powers only hurt people *sobs
+ that's what it means to be a witch, I am cursed, a failure, unwanted. 
+I just want do my part in this village  ",
+	"responses": [
+	  {
+		"text": "I understand, that urge to help others is why I travel these lands, your intention are nobel ",
+		"next_dialogue_tag": "witch_asks"
+	  },
+	 {
+		"text": "I think you should leave this village, before you hurt more people ",
+		"next_dialogue_tag": "witch_noWhere"
+	  }
+	]
+  }
+],
+
+"witch_asks": [
+  {
+	"conditions": [],
+	"text": "what should I do?",
+	"responses": [
+	  {
+		"text": "come to the pub tonight I can cast a spell to help you and these villgers ",
+		"next_dialogue_tag": "witch_unmask"
+	  },
+	 {
+		"text": "You need to work in a solution yourself.",
+		"next_dialogue_tag": "witch_leave"
+	  }
+	]
+  }
+],
+
+"witch_noWhere": [
+  {
+	"conditions": [],
+	"text": "I have no where to go, the witch society has exiled me, towns chase me away because of how I look",
+	"next_dialogue_tag": "witch_leave"
+  }
+],
+
+"witch_lonely": [
+  {
+	"conditions": [],
+	"text": "Just a bit lonely is all, after I cured the village they don't visit me anymore",
+	"responses": [
+	  {
+		"text": "that sounds like something I could help with, as a therapist wizard, speak in mo    ",
+		"next_dialogue_tag": "witch_try"
+	  },
+	 {
+		"text": "could you tell me more, Lets start with how you cure the villagers  ",
+		"next_dialogue_tag": "witch_try"
+	  }
+	]
+  }
+],
+
+"witch_try": [
+  {
+	"conditions": [],
+	"text": "villagers start coming to me, overwhelmed with emotion I try to do the best I could ...",
+	"responses": [
+	  {
+		"text": "Oh.. what do you mean?   ",
+		"next_dialogue_tag": "witch_talks_more"
+	  }
+	]
+  }
+],
+
+"witch_deflect": [
+  {
+	"conditions": [],
+	"text": "oh, nothing Important... I just enjoy stirring.    ",
+	"responses": [
+	  {
+		"text": "I hope its something that could help all these people",
+		"next_dialogue_tag": "witch_leave"
+	  },
+	  {
+		"text": "I know its more than that, trying to hurt more villagers huh?",
+		"next_dialogue_tag": "witch_cry"
+	  }
+	]
+  }
+],
+
+"witch_leave": [
+  {
+	"conditions": [],
+	"text": "is not just, leave it",
+	"next_dialogue_tag": "witch_0"
+  }
+],
+
+"witch_unmask": [
+  {
+	"conditions": [],
+	"text": "…Maybe that’s true. I never thought of it that way. Thank you for listening."
+  }
+],
 
 "baker_text_1": [
   {
