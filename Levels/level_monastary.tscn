@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://p8me13tpt1is" path="res://Levels/level_base.tscn" id="1_roojv"]
 [ext_resource type="Texture2D" uid="uid://b1qhwmew2ckgr" path="res://Assets/Images/Convent/convent.png" id="2_d3j0i"]
 [ext_resource type="PackedScene" uid="uid://cja4dwr4nk8gf" path="res://Features/Door2D/door.tscn" id="2_l5uru"]
-[ext_resource type="Texture2D" uid="uid://bvsoecitydr5t" path="res://icon.svg" id="3_uu0y2"]
 [ext_resource type="PackedScene" uid="uid://dalpwpnusxb0i" path="res://Features/NPC2D/nun.tscn" id="4_uu0y2"]
 
 [node name="LevelBase" unique_id=391544845 instance=ExtResource("1_roojv")]
@@ -12,12 +11,9 @@
 texture = ExtResource("2_d3j0i")
 
 [node name="Door" parent="Entities" parent_id_path=PackedInt32Array(721033671) index="0" unique_id=702500341 instance=ExtResource("2_l5uru")]
-position = Vector2(-215, 37)
-scale = Vector2(0.33593276, 1.0482749)
+position = Vector2(4, -42)
+scale = Vector2(0.33593276, 0.8082741)
 scene = "res://Levels/level_overworld.tscn"
 
-[node name="Sprite2D2" type="Sprite2D" parent="Entities/Door" index="2" unique_id=595725775]
-texture = ExtResource("3_uu0y2")
-
 [node name="Nun" parent="Entities" parent_id_path=PackedInt32Array(721033671) index="1" unique_id=2110108148 instance=ExtResource("4_uu0y2")]
-position = Vector2(31, 16)
+position = Vector2(-78, 28)

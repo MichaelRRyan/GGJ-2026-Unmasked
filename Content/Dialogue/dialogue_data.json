@@ -217,30 +217,17 @@
 	"responses": [
 	  {
 		"text": "You don’t stop being someone when you rest.",
-		"next_dialogue_tag": "baker_mask_removed"
-	  }
-	]
-  }
-],
-
-
-"baker_mask_removed": [
-  {
-	"conditions": [],
-	"text": "Remove Mask",
-	"responses": [
-	  {
-		"text": "Remove Mask.",
 		"next_dialogue_tag": "baker_ending"
 	  }
 	]
   }
 ],
 
+
 "baker_crack": [
   {
 	"conditions": [],
-	"text": "…Sí. Maybe that’s true. When I stop baking… my head gets loud.",
+	"text": "…Sí. Maybe that’s true. When I stop baking… my head gets loud."
   }
 ],
 
@@ -248,7 +235,7 @@
   {
 	"conditions": [],
 	"text": "…Gracias. I think I knew that. I just never said it out loud.",
-	"game_tags": [ "baker_unmasked" ]
+	"game_tags_to_add": [ "baker_unmasked" ]
   }
 ]
 
