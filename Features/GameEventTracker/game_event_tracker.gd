@@ -1,5 +1,6 @@
 extends Node
 
+@onready var intro_played = false
 
 #---------------------------------------------------------------------------------------------------
 ## Stores game-wide flags.
