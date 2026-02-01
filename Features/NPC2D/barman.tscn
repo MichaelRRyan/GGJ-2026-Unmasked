@@ -1,7 +1,8 @@
-[gd_scene format=3 uid="uid://dvke5l0xh2d30"]
+[gd_scene format=3 uid="uid://c4mb7pd7wvmlp"]
 
 [ext_resource type="Script" uid="uid://b8y6k8dt3bkyb" path="res://Features/NPC2D/npc2d.gd" id="1_yjuwv"]
 [ext_resource type="Texture2D" uid="uid://crb8ijn1cmgil" path="res://Assets/Images/Barman/barman.png" id="2_yjuwv"]
+[ext_resource type="PackedScene" uid="uid://cthyqolvd5354" path="res://Features/NPC2D/npc_animated_sprite.tscn" id="3_ie6ft"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wcxq7"]
 radius = 29.0
@@ -18,3 +19,6 @@ texture = ExtResource("2_yjuwv")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1138707699]
 position = Vector2(1, 5)
 shape = SubResource("CapsuleShape2D_wcxq7")
+
+[node name="AnimatedSprite2D" parent="." unique_id=28269377 instance=ExtResource("3_ie6ft")]
+animation = &"barman_idle"

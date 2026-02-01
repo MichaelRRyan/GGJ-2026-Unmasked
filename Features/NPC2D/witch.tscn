@@ -1,20 +1,24 @@
-[gd_scene format=3 uid="uid://g0bcgcv4nxpn"]
+[gd_scene format=3 uid="uid://fwqtsw00kded"]
 
 [ext_resource type="Script" uid="uid://b8y6k8dt3bkyb" path="res://Features/NPC2D/npc2d.gd" id="1_mu52w"]
 [ext_resource type="Texture2D" uid="uid://l7of2a11iqno" path="res://Assets/Images/Witch/witch.png" id="2_mu52w"]
+[ext_resource type="PackedScene" uid="uid://cthyqolvd5354" path="res://Features/NPC2D/npc_animated_sprite.tscn" id="3_ny0r0"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wcxq7"]
 radius = 29.0
-height = 74.0
+height = 76.0
 
 [node name="Witch" type="Area2D" unique_id=2110108148]
 script = ExtResource("1_mu52w")
 npc_tag = "witch"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=230860160]
+visible = false
 texture_filter = 1
 texture = ExtResource("2_mu52w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1138707699]
-position = Vector2(2, 13)
+position = Vector2(7, 13)
 shape = SubResource("CapsuleShape2D_wcxq7")
+
+[node name="AnimatedSprite2D" parent="." unique_id=28269377 instance=ExtResource("3_ny0r0")]
