@@ -111,8 +111,7 @@
 "witch_0": [
   {
 	"conditions": [],
-	"text": "What, brings You here.  
-	Not ill are you, you could cure yourself I'm sure... ",
+	"text": "What, brings You here. Not ill are you, you could cure yourself I'm sure... ",
 	"responses": [
 	  {
 		"text": "Just wondering how your doing.",
@@ -126,12 +125,10 @@
   },
 {
 	"conditions": ["found_village_ailment"],
-	"text": "What, brings You here.  
-	Not ill are you, you could cure yourself I'm sure...  ",
+	"text": "What, brings You here. Not ill are you, you could cure yourself I'm sure...  ",
 	"responses": [
 	  {
-		"text": "looks like something happened to this village
-do you know anything about it",
+		"text": "looks like something happened to this village do you know anything about it",
 		"next_dialogue_tag": "all_fine"
 	  }
 	]
@@ -158,8 +155,7 @@ do you know anything about it",
 "witch_cry": [
   {
 	"conditions": [],
-	"text": "*Breaks into tears 
-	I only wanted to help...",
+	"text": "*Breaks into tears I only wanted to help...",
 	"responses": [
 	  {
 		"text": "Oh.. what do you mean?",
@@ -180,9 +176,7 @@ do you know anything about it",
 "witch_talks_more": [
   {
 	"conditions": [],
-	"text": "my powers only hurt people *sobs
- that's what it means to be a witch, I am cursed, a failure, unwanted. 
-I just want do my part in this village  ",
+	"text": "my powers only hurt people *sobs that's what it means to be a witch, I am cursed, a failure, unwanted. I just want do my part in this village  ",
 	"responses": [
 	  {
 		"text": "I understand, that urge to help others is why I travel these lands, your intention are nobel ",
@@ -407,6 +401,137 @@ I just want do my part in this village  ",
   }
 ],
 
+"barman": [
+  {
+	"conditions": [],
+	"text": "Evening. Same drink as usual… or are you just here to listen?",
+	"responses": [
+	  {
+		"text": "Just checking how you’re doing.",
+		"next_dialogue_tag": "barman_alone"
+	  },
+	  {
+		"text": "I’ll take whatever’s easiest.",
+		"next_dialogue_tag": "barman_deflect"
+	  }
+	]
+  }
+],
+
+"barman_deflect": [
+  {
+	"conditions": [],
+	"text": "Easiest is quiet. Quiet pays the bills.",
+	"responses": [
+	  {
+		"text": "You sound tired.",
+		"next_dialogue_tag": "barman_alone"
+	  },
+	  {
+		"text": "Fair enough. I’ll leave you to it.",
+		"next_dialogue_tag": "barman_leave"
+	  }
+	]
+  }
+],
+
+"barman_alone": [
+  {
+	"conditions": [],
+	"text": "It’s slow most nights. People drink, talk, leave. I stay.",
+	"responses": [
+	  {
+		"text": "That sounds lonely.",
+		"next_dialogue_tag": "barman_reflect"
+	  },
+	  {
+		"text": "At least it’s peaceful.",
+		"next_dialogue_tag": "barman_deflect"
+	  }
+	]
+  }
+],
+
+"barman_reflect": [
+  {
+	"conditions": [],
+	"text": "Lonely’s just a word. This place keeps me busy enough.",
+	"responses": [
+	  {
+		"text": "Busy doesn’t mean fulfilled.",
+		"next_dialogue_tag": "barman_crack"
+	  },
+	  {
+		"text": "As long as it works for you.",
+		"next_dialogue_tag": "barman_deflect"
+	  }
+	]
+  }
+],
+
+"barman_crack": [
+  {
+	"conditions": [],
+	"text": "…Maybe. When the bar closes, the noise in my head doesn’t.",
+	"responses": [
+	  {
+		"text": "What does that noise say?",
+		"next_dialogue_tag": "barman_core"
+	  },
+	  {
+		"text": "Maybe you just need sleep.",
+		"next_dialogue_tag": "barman_deflect"
+	  }
+	]
+  }
+],
+
+"barman_core": [
+  {
+	"conditions": [],
+	"text": "It says I’m only useful while I’m pouring drinks. After that… I disappear.",
+	"responses": [
+	  {
+		"text": "You don’t disappear when the bar closes.",
+		"next_dialogue_tag": "barman_mask_off"
+	  },
+	  {
+		"text": "That’s just part of the job.",
+		"next_dialogue_tag": "barman_leave"
+	  }
+	]
+  }
+],
+
+"barman_mask_off": [
+  {
+	"conditions": [],
+	"text": "He stops wiping the glass. His shoulders drop.",
+	"responses": [
+	  {
+		"text": "Stay with him in the silence.",
+		"next_dialogue_tag": "barman_ending_mask"
+	  }
+	]
+  }
+],
+
+"barman_ending_mask": [
+  {
+	"conditions": [],
+	"text": "…Thanks. No one’s said that to me before. Maybe I don’t have to vanish after all.",
+	"game_tags_to_add": [ "barman_unmasked" ]
+
+  }
+],
+
+"barman_leave": [
+  {
+	"conditions": [],
+	"text": "He nods, already reaching for another glass. The bar hums on without you."
+  }
+]
+
 "intro_0" : [
 	{
 		"conditions": [],
@@ -462,6 +587,7 @@ I just want do my part in this village  ",
 		"text": "I should go speak to some of the villagers, find out what all that chatter was about..."
 	}
 ]
+
 
 }
   
