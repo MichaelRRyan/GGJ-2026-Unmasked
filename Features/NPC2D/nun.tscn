@@ -1,20 +1,25 @@
-[gd_scene format=3 uid="uid://ts4vpfkahnes"]
+[gd_scene format=3 uid="uid://dalpwpnusxb0i"]
 
 [ext_resource type="Script" uid="uid://b8y6k8dt3bkyb" path="res://Features/NPC2D/npc2d.gd" id="1_salo4"]
 [ext_resource type="Texture2D" uid="uid://coag1seqohda6" path="res://Assets/Images/Nun/nun.png" id="2_salo4"]
+[ext_resource type="PackedScene" uid="uid://cthyqolvd5354" path="res://Features/NPC2D/npc_animated_sprite.tscn" id="3_70bfa"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wcxq7"]
-radius = 15.0
-height = 78.0
+radius = 18.0
+height = 80.0
 
 [node name="Nun" type="Area2D" unique_id=2110108148]
 script = ExtResource("1_salo4")
 npc_tag = "nun"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=230860160]
+visible = false
 texture_filter = 1
 texture = ExtResource("2_salo4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1138707699]
 position = Vector2(5, 17)
 shape = SubResource("CapsuleShape2D_wcxq7")
+
+[node name="AnimatedSprite2D" parent="." unique_id=28269377 instance=ExtResource("3_70bfa")]
+animation = &"nun_idle"

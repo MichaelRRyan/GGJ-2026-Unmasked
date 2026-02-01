@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cnaobu41hshdd" path="res://Features/NPC2D/npc.tscn" id="7_xrgqn"]
 [ext_resource type="PackedScene" uid="uid://b8fsld12ehyuk" path="res://Features/ClickableProps2D/Sound/sound.tscn" id="8_jmebr"]
 [ext_resource type="PackedScene" uid="uid://b2k7hh86cttit" path="res://Features/ClickableProps2D/Key/key.tscn" id="9_oh2co"]
-[ext_resource type="PackedScene" path="res://Features/NPC2D/baker.tscn" id="10_ji208"]
+[ext_resource type="PackedScene" uid="uid://brpluvuecqkot" path="res://Features/NPC2D/baker.tscn" id="10_ji208"]
 
 [node name="FeaturePlayground" type="Node2D" unique_id=1510965746]
 

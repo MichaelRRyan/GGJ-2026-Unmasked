@@ -10,5 +10,11 @@
 	},
 	"baker": {
 		"next_dialogue_tag": "baker_text_1"
+  	},
+	"intro": {
+		"next_dialogue_tag": "intro_0"
+	},
+	"barman": {
+		"next_dialogue_tag": "barman"
   	}
 }
