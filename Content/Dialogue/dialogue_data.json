@@ -75,6 +75,7 @@
 		"conditions": [],
 		"text": "Hello my child. What troubles you?",
 		"next_dialogue_tag": "nun_0",
+		"game_tags_to_add": [ "talked_to_nun" ],
 		"responses": [
 			{
 				"text": "Hello, how are you keeping?",
@@ -88,11 +89,16 @@
 	}
 	],
 	"nun_howareyou": [
-		{
-		"conditions": [],
+	{
+		"conditions": [ "talked_to_nun" ],
 		"text": "Oh I'm okay don't you worry about me...",
 		"next_dialogue_tag": "nun_0"
-		}
+	},
+	{
+		"conditions": [],
+		"text": "This dialogue will never be picked!",
+		"next_dialogue_tag": "nun_0"
+	}
 	],
 	"nun_whatofthistown": [
 		{
@@ -241,7 +247,8 @@
 "baker_ending": [
   {
 	"conditions": [],
-	"text": "…Gracias. I think I knew that. I just never said it out loud."
+	"text": "…Gracias. I think I knew that. I just never said it out loud.",
+	"game_tags": [ "baker_unmasked" ]
   }
 ]
 

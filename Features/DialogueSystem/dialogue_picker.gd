@@ -48,9 +48,32 @@ func _select_dialogue(entity_tag: String) -> DialogueData:
 		if _matches(conditions, game_tags):
 			_current_dialogue = DialogueData.new(entry)
 			EntityStateManager.set_next_dialogue_tag(_current_npc_tag, _current_dialogue.next_dialogue_tag)
+			
+			# Apply any tags in the dialogue.
+			var new_game_tags = entry.get("game_tags_to_add", [])
+			for tag : String in new_game_tags:
+				GameEventTracker.activate_event(tag)
+				
+			var new_entity_tags = entry.get("entity_tags_to_add", [])
+			for tag : String in new_entity_tags:
+				EntityStateManager.add_tag(entity_tag, tag)
+			
+			_debug_print_all_tags(entity_tag)
+			
 			return _current_dialogue
 			
 	return null  ## fallback
+
+
+#---------------------------------------------------------------------------------------------------
+func _debug_print_all_tags(entity_tag):
+	var game_tags := []
+
+	# Get the tags for the npc and world.
+	game_tags.append_array(EntityStateManager.get_tags(entity_tag))
+	game_tags.append_array(GameEventTracker.get_active_tags())
+	
+	print("All tags: " + str(game_tags) + " for entity [" + entity_tag + "]")
 
 
 #---------------------------------------------------------------------------------------------------
@@ -89,7 +112,3 @@ func _matches(conditions: Array, game_tags: Array) -> bool:
 
 
 #---------------------------------------------------------------------------------------------------
-
-
-func _on_baker_npc_clicked(npc_tag: String) -> void:
-	pass # Replace with function body.
