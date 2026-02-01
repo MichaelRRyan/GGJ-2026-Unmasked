@@ -1,16 +1,20 @@
-[gd_scene format=3 uid="uid://vjr5fh2jno7t"]
+[gd_scene format=3 uid="uid://boplvoic4hjlo"]
 
 [ext_resource type="PackedScene" uid="uid://p8me13tpt1is" path="res://Levels/level_base.tscn" id="1_wy51n"]
+[ext_resource type="Theme" uid="uid://cmr35qfsqipuf" path="res://Assets/Themes/dialogue_interface.tres" id="2_cy73d"]
 [ext_resource type="PackedScene" uid="uid://cja4dwr4nk8gf" path="res://Features/Door2D/door.tscn" id="2_sfi1n"]
 [ext_resource type="Texture2D" uid="uid://bvsoecitydr5t" path="res://icon.svg" id="3_cy73d"]
+[ext_resource type="PackedScene" uid="uid://cfxcppuqwn1if" path="res://Features/NPC2D/farmer.tscn" id="5_l3dtr"]
 
 [node name="LevelBase" unique_id=391544845 instance=ExtResource("1_wy51n")]
 
 [node name="Label" type="Label" parent="Entities" parent_id_path=PackedInt32Array(721033671) index="0" unique_id=1165813816]
-offset_left = -44.0
+offset_left = -54.0
 offset_top = -94.0
-offset_right = 44.0
-offset_bottom = -71.0
+offset_right = 54.0
+offset_bottom = -70.0
+theme = ExtResource("2_cy73d")
+theme_override_colors/font_color = Color(0.7882353, 0.7294118, 0.5254902, 1)
 text = "Farmhouse"
 
 [node name="Door" parent="Entities" parent_id_path=PackedInt32Array(721033671) index="1" unique_id=702500341 instance=ExtResource("2_sfi1n")]
@@ -19,3 +23,7 @@ scene = "res://Levels/level_overworld.tscn"
 
 [node name="Sprite2D2" type="Sprite2D" parent="Entities/Door" index="2" unique_id=1108740958]
 texture = ExtResource("3_cy73d")
+
+[node name="Farmer" parent="Entities" parent_id_path=PackedInt32Array(721033671) index="2" unique_id=2110108148 instance=ExtResource("5_l3dtr")]
+position = Vector2(91, 0)
+scale = Vector2(1.2, 1.2)

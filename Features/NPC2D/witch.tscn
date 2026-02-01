@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://g0bcgcv4nxpn"]
+
+[ext_resource type="Script" uid="uid://b8y6k8dt3bkyb" path="res://Features/NPC2D/npc2d.gd" id="1_mu52w"]
+[ext_resource type="Texture2D" uid="uid://l7of2a11iqno" path="res://Assets/Images/Witch/witch.png" id="2_mu52w"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wcxq7"]
+radius = 29.0
+height = 74.0
+
+[node name="Witch" type="Area2D" unique_id=2110108148]
+script = ExtResource("1_mu52w")
+npc_tag = "witch"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=230860160]
+texture_filter = 1
+texture = ExtResource("2_mu52w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1138707699]
+position = Vector2(2, 13)
+shape = SubResource("CapsuleShape2D_wcxq7")

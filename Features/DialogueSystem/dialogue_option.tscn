@@ -5,5 +5,5 @@ clip_contents = true
 custom_minimum_size = Vector2(0, 60)
 offset_right = 321.0
 offset_bottom = 60.0
-text = "Your are very wrong AAAAAAAAAAA"
+text = "This is a dialogue option"
 autowrap_mode = 3
