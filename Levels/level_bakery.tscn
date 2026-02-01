@@ -1,22 +1,20 @@
-[gd_scene format=3 uid="uid://xqfivvuoaboy"]
+[gd_scene format=3 uid="uid://dntulj0epjws1"]
 
 [ext_resource type="PackedScene" uid="uid://p8me13tpt1is" path="res://Levels/level_base.tscn" id="1_gbif7"]
 [ext_resource type="PackedScene" uid="uid://cja4dwr4nk8gf" path="res://Features/Door2D/door.tscn" id="2_6qocl"]
 [ext_resource type="Texture2D" uid="uid://ca1rf3io7v4sm" path="res://Assets/Images/bakery/bakery_location.png" id="2_imupn"]
-[ext_resource type="PackedScene" uid="uid://s1to4w3wy36g" path="res://Features/NPC2D/baker.tscn" id="5_40o6h"]
+[ext_resource type="PackedScene" path="res://Features/NPC2D/baker.tscn" id="5_40o6h"]
 
 [node name="LevelBase" unique_id=391544845 instance=ExtResource("1_gbif7")]
 
-[node name="Pub" type="Sprite2D" parent="." index="0" unique_id=2086786960]
-texture_filter = 1
-position = Vector2(-6, -8)
+[node name="Background" parent="." index="0" unique_id=2026553354]
 texture = ExtResource("2_imupn")
 
+[node name="Baker" parent="." index="3" unique_id=2110108148 instance=ExtResource("5_40o6h")]
+position = Vector2(-95, 26)
+scale = Vector2(1.2, 1.2)
+
 [node name="Door" parent="Entities" parent_id_path=PackedInt32Array(721033671) index="0" unique_id=702500341 instance=ExtResource("2_6qocl")]
-position = Vector2(39, 4.7683716e-07)
+position = Vector2(46, 6.9999995)
 scale = Vector2(0.38, 0.85)
 scene = "res://Levels/level_overworld.tscn"
-
-[node name="Baker" parent="." index="4" unique_id=2110108148 instance=ExtResource("5_40o6h")]
-position = Vector2(-97, 25)
-scale = Vector2(1.2, 1.2)

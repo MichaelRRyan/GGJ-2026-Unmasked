@@ -3,7 +3,7 @@ class_name DialogueData
 var text : String = ""
 var speaker_name : String = ""
 var next_dialogue_tag : String = ""
-var responses : Array = [] # Contains dialogue data?
+var responses : Array = [] # Contains dialogue data
 
 
 func _init(dialogue_json: Dictionary) -> void:
