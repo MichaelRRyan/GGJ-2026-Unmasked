@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://s1to4w3wy36g"]
+[gd_scene format=3 uid="uid://brpluvuecqkot"]
 
 [ext_resource type="Script" uid="uid://b8y6k8dt3bkyb" path="res://Features/NPC2D/npc2d.gd" id="1_bohmv"]
 [ext_resource type="Texture2D" uid="uid://b1xx6bpatuktv" path="res://Assets/Images/Baker/baker.png" id="2_bohmv"]
