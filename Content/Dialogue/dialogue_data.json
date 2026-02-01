@@ -385,30 +385,17 @@ I just want do my part in this village  ",
 	"responses": [
 	  {
 		"text": "You don’t stop being someone when you rest.",
-		"next_dialogue_tag": "baker_mask_removed"
-	  }
-	]
-  }
-],
-
-
-"baker_mask_removed": [
-  {
-	"conditions": [],
-	"text": "Remove Mask",
-	"responses": [
-	  {
-		"text": "Remove Mask.",
 		"next_dialogue_tag": "baker_ending"
 	  }
 	]
   }
 ],
 
+
 "baker_crack": [
   {
 	"conditions": [],
-	"text": "…Sí. Maybe that’s true. When I stop baking… my head gets loud.",
+	"text": "…Sí. Maybe that’s true. When I stop baking… my head gets loud."
   }
 ],
 
@@ -416,10 +403,65 @@ I just want do my part in this village  ",
   {
 	"conditions": [],
 	"text": "…Gracias. I think I knew that. I just never said it out loud.",
-	"game_tags": [ "baker_unmasked" ]
+	"game_tags_to_add": [ "baker_unmasked" ]
   }
-]
+],
 
+"intro_0" : [
+	{
+		"conditions": [],
+		"text": "Hmmm... So this is the village. Things seem fine to me...",
+		"responses": [
+	  {
+		"text": "Continue...",
+		"next_dialogue_tag": "intro_1"
+	  }
+	]
+	}
+],
+"intro_1" : [
+	{
+		"conditions": [],
+		"text": "It's very quiet here. The rumours made it sound a lot more chaotic.",
+		"next_dialogue_tag": "intro_2",
+		"responses": [
+	  {
+		"text": "Continue...",
+		"next_dialogue_tag": "intro_2"
+	  }
+	]
+	}
+],
+"intro_2" : [
+	{
+		"conditions": [],
+		"text": "Those cityfolk tend to exaggerate, though.",
+		"responses": [
+	  {
+		"text": "Continue...",
+		"next_dialogue_tag": "intro_3"
+	  }
+	]
+	}
+],
+"intro_3" : [
+	{
+		"conditions": [],
+		"text": "I'm sure there's something I could help with.",
+		"responses": [
+	  {
+		"text": "Continue...",
+		"next_dialogue_tag": "intro_4"
+	  }
+	]
+	}
+],
+"intro_4" : [
+	{
+		"conditions": [],
+		"text": "I should go speak to some of the villagers, find out what all that chatter was about..."
+	}
+]
 
 }
   

@@ -2,17 +2,23 @@
 
 [ext_resource type="Script" uid="uid://b8y6k8dt3bkyb" path="res://Features/NPC2D/npc2d.gd" id="1_0qwy0"]
 [ext_resource type="Texture2D" uid="uid://d0mxu58poulh4" path="res://Assets/Images/Guy/Guy.png" id="1_wcxq7"]
+[ext_resource type="PackedScene" uid="uid://cthyqolvd5354" path="res://Features/NPC2D/npc_animated_sprite.tscn" id="3_y44qn"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wcxq7"]
-radius = 73.0
-height = 362.0
+radius = 14.0
+height = 78.0
 
 [node name="NPC" type="Area2D" unique_id=2110108148]
 script = ExtResource("1_0qwy0")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=230860160]
+visible = false
 texture = ExtResource("1_wcxq7")
 
+[node name="AnimatedSprite2D" parent="." unique_id=28269377 instance=ExtResource("3_y44qn")]
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1138707699]
-position = Vector2(-6, -106)
+position = Vector2(5, 18)
 shape = SubResource("CapsuleShape2D_wcxq7")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animation_finished"]

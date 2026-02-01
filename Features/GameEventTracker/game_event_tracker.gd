@@ -1,5 +1,7 @@
 extends Node
 
+signal event_tag_added(game_tag : String)
+@onready var intro_played = false
 
 #---------------------------------------------------------------------------------------------------
 ## Stores game-wide flags.
