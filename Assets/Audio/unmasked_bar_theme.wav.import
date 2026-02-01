@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dufmqvf1bmus5"
-path="res://.godot/imported/unmasked bar theme.wav-0ebc520003257940aca3e6f6f65cc6fa.sample"
+path="res://.godot/imported/unmasked_bar_theme.wav-a782834e64beff6668c90f75da5435bb.sample"
 
 [deps]
 
-source_file="res://Assets/Audio/unmasked bar theme.wav"
-dest_files=["res://.godot/imported/unmasked bar theme.wav-0ebc520003257940aca3e6f6f65cc6fa.sample"]
+source_file="res://Assets/Audio/unmasked_bar_theme.wav"
+dest_files=["res://.godot/imported/unmasked_bar_theme.wav-a782834e64beff6668c90f75da5435bb.sample"]
 
 [params]
 
