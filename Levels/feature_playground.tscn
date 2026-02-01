@@ -66,4 +66,3 @@ scale = Vector2(5.2021804, 4.463281)
 [connection signal="cabinet_opened" from="Entities/Cabinet" to="Entities/Key" method="_show"]
 [connection signal="mouse_entered" from="Entities/Key" to="Entities/Key" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Entities/Key" to="Entities/Key" method="_on_mouse_exited"]
-[connection signal="npc_clicked" from="Entities/baker" to="Systems/DialogueController" method="show_dialogue"]

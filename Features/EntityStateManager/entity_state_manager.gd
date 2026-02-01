@@ -5,10 +5,27 @@ extends Node
 # NPC state data
 var _state_data: Dictionary = {} ## E.g. { "daisy": { "is_thirsty": true, "affection_score": 0 } }
 
+var bgm_player = AudioStreamPlayer.new()
+func setup_audio() -> void:
+	add_child(bgm_player)
+	print("loaded song")
+	var song = load("res://Assets/Audio/Unmasked Theme.mp3") 
+	
+	#if current_path == "res://Levels/level_bar.tscn":
+		#bgm_player.stream = load("res://Assets/Audio/unmasked bar theme.wav")
+	#elif current_path == "res://Levels/level_witch_tower.tscn":
+		#bgm_player.stream = load("res://Assets/Audio/Unmasked witch theme.wav")
+	#elif current_path == "res://Levels/level_end.tscn": # Fixed logic here
+		#bgm_player.stream = load("res://Assets/Audio/Unmasked end screen.wav")
+	#else: 
+	bgm_player.stream = song
+	bgm_player.play(0.0)
+
 
 func _ready() -> void:
 	# Load dialogue from a file (JSON) at start-up.
 	var file := FileAccess.open(base_character_data_file, FileAccess.READ)
+	setup_audio()
 	if file:
 		_state_data = JSON.parse_string(file.get_as_text()) as Dictionary
 		file.close()
