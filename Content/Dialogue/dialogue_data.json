@@ -418,7 +418,137 @@ I just want do my part in this village  ",
 	"text": "…Gracias. I think I knew that. I just never said it out loud.",
 	"game_tags": [ "baker_unmasked" ]
   }
+],
+
+"barman": [
+  {
+	"conditions": [],
+	"text": "Evening. Same drink as usual… or are you just here to listen?",
+	"responses": [
+	  {
+		"text": "Just checking how you’re doing.",
+		"next_dialogue_tag": "barman_alone"
+	  },
+	  {
+		"text": "I’ll take whatever’s easiest.",
+		"next_dialogue_tag": "barman_deflect"
+	  }
+	]
+  }
+],
+
+"barman_deflect": [
+  {
+	"conditions": [],
+	"text": "Easiest is quiet. Quiet pays the bills.",
+	"responses": [
+	  {
+		"text": "You sound tired.",
+		"next_dialogue_tag": "barman_alone"
+	  },
+	  {
+		"text": "Fair enough. I’ll leave you to it.",
+		"next_dialogue_tag": "barman_leave"
+	  }
+	]
+  }
+],
+
+"barman_alone": [
+  {
+	"conditions": [],
+	"text": "It’s slow most nights. People drink, talk, leave. I stay.",
+	"responses": [
+	  {
+		"text": "That sounds lonely.",
+		"next_dialogue_tag": "barman_reflect"
+	  },
+	  {
+		"text": "At least it’s peaceful.",
+		"next_dialogue_tag": "barman_deflect"
+	  }
+	]
+  }
+],
+
+"barman_reflect": [
+  {
+	"conditions": [],
+	"text": "Lonely’s just a word. This place keeps me busy enough.",
+	"responses": [
+	  {
+		"text": "Busy doesn’t mean fulfilled.",
+		"next_dialogue_tag": "barman_crack"
+	  },
+	  {
+		"text": "As long as it works for you.",
+		"next_dialogue_tag": "barman_deflect"
+	  }
+	]
+  }
+],
+
+"barman_crack": [
+  {
+	"conditions": [],
+	"text": "…Maybe. When the bar closes, the noise in my head doesn’t.",
+	"responses": [
+	  {
+		"text": "What does that noise say?",
+		"next_dialogue_tag": "barman_core"
+	  },
+	  {
+		"text": "Maybe you just need sleep.",
+		"next_dialogue_tag": "barman_deflect"
+	  }
+	]
+  }
+],
+
+"barman_core": [
+  {
+	"conditions": [],
+	"text": "It says I’m only useful while I’m pouring drinks. After that… I disappear.",
+	"responses": [
+	  {
+		"text": "You don’t disappear when the bar closes.",
+		"next_dialogue_tag": "barman_mask_off"
+	  },
+	  {
+		"text": "That’s just part of the job.",
+		"next_dialogue_tag": "barman_leave"
+	  }
+	]
+  }
+],
+
+"barman_mask_off": [
+  {
+	"conditions": [],
+	"text": "He stops wiping the glass. His shoulders drop.",
+	"responses": [
+	  {
+		"text": "Stay with him in the silence.",
+		"next_dialogue_tag": "barman_ending_mask"
+	  }
+	]
+  }
+],
+
+"barman_ending_mask": [
+  {
+	"conditions": [],
+	"text": "…Thanks. No one’s said that to me before. Maybe I don’t have to vanish after all."
+  }
+],
+
+"barman_leave": [
+  {
+	"conditions": [],
+	"text": "He nods, already reaching for another glass. The bar hums on without you."
+  }
 ]
+
 
 
 }
