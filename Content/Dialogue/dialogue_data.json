@@ -538,7 +538,9 @@ I just want do my part in this village  ",
 "barman_ending_mask": [
   {
 	"conditions": [],
-	"text": "…Thanks. No one’s said that to me before. Maybe I don’t have to vanish after all."
+	"text": "…Thanks. No one’s said that to me before. Maybe I don’t have to vanish after all.",
+	"game_tags_to_add": [ "barman_unmasked" ]
+
   }
 ],
 

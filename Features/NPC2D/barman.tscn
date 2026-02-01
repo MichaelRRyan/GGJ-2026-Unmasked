@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dvke5l0xh2d30"]
+[gd_scene format=3 uid="uid://c4mb7pd7wvmlp"]
 
 [ext_resource type="Script" uid="uid://b8y6k8dt3bkyb" path="res://Features/NPC2D/npc2d.gd" id="1_yjuwv"]
 [ext_resource type="Texture2D" uid="uid://crb8ijn1cmgil" path="res://Assets/Images/Barman/barman.png" id="2_yjuwv"]
