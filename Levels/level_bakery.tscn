@@ -1,8 +1,9 @@
-[gd_scene format=3 uid="uid://dntulj0epjws1"]
+[gd_scene format=3 uid="uid://ccql64136ilkf"]
 
 [ext_resource type="PackedScene" uid="uid://p8me13tpt1is" path="res://Levels/level_base.tscn" id="1_gbif7"]
 [ext_resource type="PackedScene" uid="uid://cja4dwr4nk8gf" path="res://Features/Door2D/door.tscn" id="2_6qocl"]
 [ext_resource type="Texture2D" uid="uid://ca1rf3io7v4sm" path="res://Assets/Images/bakery/bakery_location.png" id="2_imupn"]
+[ext_resource type="PackedScene" uid="uid://brpluvuecqkot" path="res://Features/NPC2D/baker.tscn" id="4_imupn"]
 
 [node name="LevelBase" unique_id=391544845 instance=ExtResource("1_gbif7")]
 
@@ -13,3 +14,6 @@ texture = ExtResource("2_imupn")
 position = Vector2(45, 9.000004)
 scale = Vector2(0.41526395, 0.8814738)
 scene = "res://Levels/level_overworld.tscn"
+
+[node name="baker" parent="." index="4" unique_id=293219293 instance=ExtResource("4_imupn")]
+position = Vector2(-45, 30)
