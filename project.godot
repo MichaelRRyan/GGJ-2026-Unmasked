@@ -24,6 +24,7 @@ config/icon="res://icon.svg"
 DialogueController="*uid://dci6pxoc448n6"
 EntityStateManager="*uid://c3uhw1nt66w2c"
 GameEventTracker="*uid://ctb34q23cvkgp"
+BackgroundMusicPlayer="*uid://xq8n6pbd4k8n"
 
 [display]
 

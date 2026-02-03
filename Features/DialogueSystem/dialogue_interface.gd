@@ -25,7 +25,7 @@ func _display_dialogue(dialogue_data: DialogueData) -> void:
 		$ColorRect/Label.text = dialogue_data.text
 		
 		# Display dialogue options as buttons.
-		if not dialogue_data.responses.is_empty():
+		if dialogue_data.has_valid_response():
 			_add_response_options(dialogue_data.responses)
 		
 		else: # Else display a "Continue..." button,
@@ -38,10 +38,14 @@ func _display_dialogue(dialogue_data: DialogueData) -> void:
 #-------------------------------------------------------------------------------
 func _add_response_options(responses : Array) -> void:
 	for i in responses.size():
-		var optionScene : Button = ResponseOptionScene.instantiate()
-		optionScene.text = responses[i].text
-		optionScene.connect("pressed", _option_selected.bind(i))
-		$DialogueOptions.add_child(optionScene)
+		var response : DialogueData = responses[i]
+		if response.enabled:
+			
+			# Setup and populate the response option scene.
+			var optionScene : Button = ResponseOptionScene.instantiate()
+			optionScene.text = response.text
+			optionScene.connect("pressed", _option_selected.bind(i))
+			$DialogueOptions.add_child(optionScene)
 
 
 #-------------------------------------------------------------------------------

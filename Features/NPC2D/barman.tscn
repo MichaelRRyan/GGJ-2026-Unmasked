@@ -17,6 +17,7 @@ texture_filter = 1
 texture = ExtResource("2_yjuwv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1138707699]
+visible = false
 position = Vector2(1, 5)
 shape = SubResource("CapsuleShape2D_wcxq7")
 

@@ -1,593 +1,593 @@
 {
-	"cabinet_opened0": [
-	  {
-		"conditions": [],
-		"text": "So the cabinet opens..."
-	  }
-	],
-	"cabinet_opened1": [
-	  {
-		"conditions": [],
-		"text": "And it opens again"
-	  }
-	],
-	"cabinet_opened2": [
-	  {
-		"conditions": [],
-		"text": "I actually don't know why I assumed it wouldn't open"
-	  }
-	],
-	"sample": [
-	  {
-		"conditions": ["is_thirsty"],
-		"text": "I'm feeling quite parched today... Could you bring me some water?",
-		"next_dialogue_tag": "person_text_2"
-	  },
-	  {
-		"conditions": ["is_happy"],
-		"text": "The garden feels wonderful today! Thank you for cheering me up!",
-		"next_dialogue_tag": "person_text_2"
-	  },
-	  {
-		"conditions": ["!is_thirsty", "!is_happy"],
-		"text": "Just another lovely day blooming in the garden.",
-		"next_dialogue_tag": "person_text_2"
-	  },
-	  {
-		"conditions": [],
-		"text": "Have you noticed how much we've grown?",
-		"next_dialogue_tag": "person_text_2"
-	  }
-	],
-	"person_text_1": [
-	  {
-		"conditions": [],
-		"text": "This is my first line of dialogue",
-		"next_dialogue_tag": "person_text_2",
-		"responses": [
-		  {
-			"text": "My first response",
-			"next_dialogue_tag": "person_text_2"
-		  },
-		  {
-			  "text": "My second response",
-			  "next_dialogue_tag": "person_text_3"
-		  }
-		]
-	  }
-	],
-	"person_text_2": [
-	  {
-		"conditions": [],
-		"text": "This is my second line",
-		"next_dialogue_tag": "person_text_1"
-	  }
-	],
-	"person_text_3": [
-	  {
-		"conditions": [],
-		"text": "You've expended all my dialogue",
-		"next_dialogue_tag": "person_text_3"
-	  }
-	],
-	"nun_0": [
-	{
-		"conditions": [],
-		"text": "Hello my child. What troubles you?",
-		"next_dialogue_tag": "nun_0",
-		"game_tags_to_add": [ "talked_to_nun" ],
-		"responses": [
-			{
-				"text": "Hello, how are you keeping?",
-				"next_dialogue_tag": "nun_howareyou"
-			},
-			{
-				"text": "Hello, I've just moved here, what can you tell me about this town?",
-				"next_dialogue_tag": "nun_whatofthistown"
-			}
-		]
-	}
-	],
-	"nun_howareyou": [
-	{
-		"conditions": [ "talked_to_nun" ],
-		"text": "Oh I'm okay don't you worry about me...",
-		"next_dialogue_tag": "nun_0"
-	},
-	{
-		"conditions": [],
-		"text": "This dialogue will never be picked!",
-		"next_dialogue_tag": "nun_0"
-	}
-	],
-	"nun_whatofthistown": [
-		{
-		"conditions": [],
-		"text": "Oh well a very warm welcome to you! This town is a lovely place, though it's been odd lately...",
-		"next_dialogue_tag": "nun_0"
-		}
-	],
+  "cabinet_opened0": [
+    {
+      "conditions": [],
+      "text": "So the cabinet opens..."
+    }
+  ],
+  "cabinet_opened1": [
+    {
+      "conditions": [],
+      "text": "And it opens again"
+    }
+  ],
+  "cabinet_opened2": [
+    {
+      "conditions": [],
+      "text": "I actually don't know why I assumed it wouldn't open"
+    }
+  ],
+  "sample": [
+    {
+      "conditions": ["is_thirsty"],
+      "text": "I'm feeling quite parched today... Could you bring me some water?",
+      "next_dialogue_tag": "person_text_2"
+    },
+    {
+      "conditions": ["is_happy"],
+      "text": "The garden feels wonderful today! Thank you for cheering me up!",
+      "next_dialogue_tag": "person_text_2"
+    },
+    {
+      "conditions": ["!is_thirsty", "!is_happy"],
+      "text": "Just another lovely day blooming in the garden.",
+      "next_dialogue_tag": "person_text_2"
+    },
+    {
+      "conditions": [],
+      "text": "Have you noticed how much we've grown?",
+      "next_dialogue_tag": "person_text_2"
+    }
+  ],
+  "person_text_1": [
+    {
+      "conditions": [],
+      "text": "This is my first line of dialogue",
+      "next_dialogue_tag": "person_text_2",
+      "responses": [
+        {
+          "text": "My first response",
+          "next_dialogue_tag": "person_text_2"
+        },
+        {
+          "text": "My second response",
+          "next_dialogue_tag": "person_text_3"
+        }
+      ]
+    }
+  ],
+  "person_text_2": [
+    {
+      "conditions": [],
+      "text": "This is my second line",
+      "next_dialogue_tag": "person_text_1"
+    }
+  ],
+  "person_text_3": [
+    {
+      "conditions": [],
+      "text": "You've expended all my dialogue",
+      "next_dialogue_tag": "person_text_3"
+    }
+  ],
+  "nun_0": [
+    {
+      "conditions": [],
+      "text": "Hello my child. What troubles you?",
+      "next_dialogue_tag": "nun_0",
+      "game_tags_to_add": ["talked_to_nun"],
+      "responses": [
+        {
+          "conditions": ["talked_to_nun"],
+          "text": "Hello again! How are you keeping?",
+          "next_dialogue_tag": "nun_howareyou"
+        },
+        {
+          "conditions": ["!talked_to_nun"],
+          "text": "Hello, how are you keeping?",
+          "next_dialogue_tag": "nun_howareyou"
+        },
+        {
+          "text": "Hello, I've just moved here, what can you tell me about this town?",
+          "next_dialogue_tag": "nun_whatofthistown"
+        }
+      ]
+    }
+  ],
+  "nun_howareyou": [
+    {
+      "conditions": ["talked_to_nun"],
+      "text": "Oh I'm okay don't you worry about me...",
+      "next_dialogue_tag": "nun_0"
+    },
+    {
+      "conditions": [],
+      "text": "This dialogue will never be picked!",
+      "next_dialogue_tag": "nun_0"
+    }
+  ],
+  "nun_whatofthistown": [
+    {
+      "conditions": [],
+      "text": "Oh well a very warm welcome to you! This town is a lovely place, though it's been odd lately...",
+      "next_dialogue_tag": "nun_0"
+    }
+  ],
 
-"witch_0": [
-  {
-	"conditions": [],
-	"text": "What, brings You here. Not ill are you, you could cure yourself I'm sure... ",
-	"responses": [
-	  {
-		"text": "Just wondering how your doing.",
-		"next_dialogue_tag": "witch_lonely"
-	  },
-	  {
-		"text": "what are you brewing in that cauldron",
-		"next_dialogue_tag": "witch_deflect"
-	  }
-	]
-  },
-{
-	"conditions": ["found_village_ailment"],
-	"text": "What, brings You here. Not ill are you, you could cure yourself I'm sure...  ",
-	"responses": [
-	  {
-		"text": "looks like something happened to this village do you know anything about it",
-		"next_dialogue_tag": "all_fine"
-	  }
-	]
-  }
-],
+  "witch_0": [
+    {
+      "conditions": ["found_village_ailment"],
+      "text": "What, brings You here. Not ill are you, you could cure yourself I'm sure...  ",
+      "responses": [
+        {
+          "text": "looks like something happened to this village do you know anything about it",
+          "next_dialogue_tag": "all_fine"
+        }
+      ]
+    },
+    {
+      "conditions": [],
+      "text": "What, brings You here. Not ill are you, you could cure yourself I'm sure... ",
+      "responses": [
+        {
+          "text": "Just wondering how your doing.",
+          "next_dialogue_tag": "witch_lonely"
+        },
+        {
+          "text": "what are you brewing in that cauldron",
+          "next_dialogue_tag": "witch_deflect"
+        }
+      ]
+    }
+  ],
 
-"all_fine": [
-  {
-	"conditions": [],
-	"text": "Everyone seems fine to me, maybe even better than before. heehee ",
-	"responses": [
-	  {
-		"text": "I can tell somethings wrong with these people",
-		"next_dialogue_tag": "witch_cry"
-	  },
-	  {
-		"text": "have you been outside?",
-		"next_dialogue_tag": "witch_stays_home"
-	  }
-	]
-  }
-],
+  "all_fine": [
+    {
+      "conditions": [],
+      "text": "Everyone seems fine to me, maybe even better than before. heehee ",
+      "responses": [
+        {
+          "text": "I can tell somethings wrong with these people",
+          "next_dialogue_tag": "witch_cry"
+        },
+        {
+          "text": "have you been outside?",
+          "next_dialogue_tag": "witch_stays_home"
+        }
+      ]
+    }
+  ],
 
-"witch_cry": [
-  {
-	"conditions": [],
-	"text": "*Breaks into tears I only wanted to help...",
-	"responses": [
-	  {
-		"text": "Oh.. what do you mean?",
-		"next_dialogue_tag": "witch_talks_more"
-	  }
-	]
-  }
-],
+  "witch_cry": [
+    {
+      "conditions": [],
+      "text": "*Breaks into tears I only wanted to help...",
+      "responses": [
+        {
+          "text": "Oh.. what do you mean?",
+          "next_dialogue_tag": "witch_talks_more"
+        }
+      ]
+    }
+  ],
 
-"witch_stays_home": [
-  {
-	"conditions": [],
-	"text": "not in a while, the villagers don't like me much",
-	"next_dialogue_tag": "witch_0"
-  }
-],
+  "witch_stays_home": [
+    {
+      "conditions": [],
+      "text": "not in a while, the villagers don't like me much",
+      "next_dialogue_tag": "witch_0"
+    }
+  ],
 
-"witch_talks_more": [
-  {
-	"conditions": [],
-	"text": "my powers only hurt people *sobs that's what it means to be a witch, I am cursed, a failure, unwanted. I just want do my part in this village  ",
-	"responses": [
-	  {
-		"text": "I understand, that urge to help others is why I travel these lands, your intention are nobel ",
-		"next_dialogue_tag": "witch_asks"
-	  },
-	 {
-		"text": "I think you should leave this village, before you hurt more people ",
-		"next_dialogue_tag": "witch_noWhere"
-	  }
-	]
-  }
-],
+  "witch_talks_more": [
+    {
+      "conditions": [],
+      "text": "my powers only hurt people *sobs that's what it means to be a witch, I am cursed, a failure, unwanted. I just want do my part in this village  ",
+      "responses": [
+        {
+          "text": "I understand, that urge to help others is why I travel these lands, your intention are nobel ",
+          "next_dialogue_tag": "witch_asks"
+        },
+        {
+          "text": "I think you should leave this village, before you hurt more people ",
+          "next_dialogue_tag": "witch_noWhere"
+        }
+      ]
+    }
+  ],
 
-"witch_asks": [
-  {
-	"conditions": [],
-	"text": "what should I do?",
-	"responses": [
-	  {
-		"text": "come to the pub tonight I can cast a spell to help you and these villgers ",
-		"next_dialogue_tag": "witch_unmask"
-	  },
-	 {
-		"text": "You need to work in a solution yourself.",
-		"next_dialogue_tag": "witch_leave"
-	  }
-	]
-  }
-],
+  "witch_asks": [
+    {
+      "conditions": [],
+      "text": "what should I do?",
+      "responses": [
+        {
+          "text": "come to the pub tonight I can cast a spell to help you and these villgers ",
+          "next_dialogue_tag": "witch_unmask"
+        },
+        {
+          "text": "You need to work in a solution yourself.",
+          "next_dialogue_tag": "witch_leave"
+        }
+      ]
+    }
+  ],
 
-"witch_noWhere": [
-  {
-	"conditions": [],
-	"text": "I have no where to go, the witch society has exiled me, towns chase me away because of how I look",
-	"next_dialogue_tag": "witch_leave"
-  }
-],
+  "witch_noWhere": [
+    {
+      "conditions": [],
+      "text": "I have no where to go, the witch society has exiled me, towns chase me away because of how I look",
+      "next_dialogue_tag": "witch_leave"
+    }
+  ],
 
-"witch_lonely": [
-  {
-	"conditions": [],
-	"text": "Just a bit lonely is all, after I cured the village they don't visit me anymore",
-	"responses": [
-	  {
-		"text": "that sounds like something I could help with, as a therapist wizard, speak in mo    ",
-		"next_dialogue_tag": "witch_try"
-	  },
-	 {
-		"text": "could you tell me more, Lets start with how you cure the villagers  ",
-		"next_dialogue_tag": "witch_try"
-	  }
-	]
-  }
-],
+  "witch_lonely": [
+    {
+      "conditions": [],
+      "text": "Just a bit lonely is all, after I cured the village they don't visit me anymore",
+      "responses": [
+        {
+          "text": "that sounds like something I could help with, as a therapist wizard, speak in mo    ",
+          "next_dialogue_tag": "witch_try"
+        },
+        {
+          "text": "could you tell me more, Lets start with how you cure the villagers  ",
+          "next_dialogue_tag": "witch_try"
+        }
+      ]
+    }
+  ],
 
-"witch_try": [
-  {
-	"conditions": [],
-	"text": "villagers start coming to me, overwhelmed with emotion I try to do the best I could ...",
-	"responses": [
-	  {
-		"text": "Oh.. what do you mean?   ",
-		"next_dialogue_tag": "witch_talks_more"
-	  }
-	]
-  }
-],
+  "witch_try": [
+    {
+      "conditions": [],
+      "text": "villagers start coming to me, overwhelmed with emotion I try to do the best I could ...",
+      "responses": [
+        {
+          "text": "Oh.. what do you mean?   ",
+          "next_dialogue_tag": "witch_talks_more"
+        }
+      ]
+    }
+  ],
 
-"witch_deflect": [
-  {
-	"conditions": [],
-	"text": "oh, nothing Important... I just enjoy stirring.    ",
-	"responses": [
-	  {
-		"text": "I hope its something that could help all these people",
-		"next_dialogue_tag": "witch_leave"
-	  },
-	  {
-		"text": "I know its more than that, trying to hurt more villagers huh?",
-		"next_dialogue_tag": "witch_cry"
-	  }
-	]
-  }
-],
+  "witch_deflect": [
+    {
+      "conditions": [],
+      "text": "oh, nothing Important... I just enjoy stirring.    ",
+      "responses": [
+        {
+          "text": "I hope its something that could help all these people",
+          "next_dialogue_tag": "witch_leave"
+        },
+        {
+          "text": "I know its more than that, trying to hurt more villagers huh?",
+          "next_dialogue_tag": "witch_cry"
+        }
+      ]
+    }
+  ],
 
-"witch_leave": [
-  {
-	"conditions": [],
-	"text": "is not just, leave it",
-	"next_dialogue_tag": "witch_0"
-  }
-],
+  "witch_leave": [
+    {
+      "conditions": [],
+      "text": "is not just, leave it",
+      "next_dialogue_tag": "witch_0"
+    }
+  ],
 
-"witch_unmask": [
-  {
-	"conditions": [],
-	"text": "…Maybe that’s true. I never thought of it that way. Thank you for listening."
-  }
-],
+  "witch_unmask": [
+    {
+      "conditions": [],
+      "text": "…Maybe that’s true. I never thought of it that way. Thank you for listening."
+    }
+  ],
 
-"baker_text_1": [
-  {
-	"conditions": [],
-	"text": "Ah, hola amigo… I’m testing a new receta today. Smells okay, no?",
-	"responses": [
-	  {
-		"text": "Yeah, it smells really good.",
-		"next_dialogue_tag": "baker_routine_good"
-	  },
-	  {
-		"text": "Honestly… it smells a bit strange.",
-		"next_dialogue_tag": "baker_routine_strange"
-	  }
-	]
-  }
-],
+  "baker_text_1": [
+    {
+      "conditions": [],
+      "text": "Ah, hola amigo… I’m testing a new receta today. Smells okay, no?",
+      "responses": [
+        {
+          "text": "Yeah, it smells really good.",
+          "next_dialogue_tag": "baker_routine_good"
+        },
+        {
+          "text": "Honestly… it smells a bit strange.",
+          "next_dialogue_tag": "baker_routine_strange"
+        }
+      ]
+    }
+  ],
 
-"baker_routine_good": [
-  {
-	"conditions": [],
-	"text": "Heh, gracias. Maybe I’m improving, sí.",
-	"responses": [
-	  {
-		"text": "You bake here all the time?",
-		"next_dialogue_tag": "baker_every_day"
-	  },
-	  {
-		"text": "Does it ever get tiring?",
-		"next_dialogue_tag": "baker_tiring"
-	  }
-	]
-  }
-],
+  "baker_routine_good": [
+    {
+      "conditions": [],
+      "text": "Heh, gracias. Maybe I’m improving, sí.",
+      "responses": [
+        {
+          "text": "You bake here all the time?",
+          "next_dialogue_tag": "baker_every_day"
+        },
+        {
+          "text": "Does it ever get tiring?",
+          "next_dialogue_tag": "baker_tiring"
+        }
+      ]
+    }
+  ],
 
-"baker_routine_strange": [
-  {
-	"conditions": [],
-	"text": "Ay… yeah. Too much yeast, quizá. Still, I bake every day. Keeps the hands busy.",
-	"responses": [
-	  {
-		"text": "You bake here all the time?",
-		"next_dialogue_tag": "baker_every_day"
-	  },
-	  {
-		"text": "Does it ever get tiring?",
-		"next_dialogue_tag": "baker_tiring"
-	  }
-	]
-  }
-],
+  "baker_routine_strange": [
+    {
+      "conditions": [],
+      "text": "Ay… yeah. Too much yeast, quizá. Still, I bake every day. Keeps the hands busy.",
+      "responses": [
+        {
+          "text": "You bake here all the time?",
+          "next_dialogue_tag": "baker_every_day"
+        },
+        {
+          "text": "Does it ever get tiring?",
+          "next_dialogue_tag": "baker_tiring"
+        }
+      ]
+    }
+  ],
 
-"baker_every_day": [
-  {
-	"conditions": [],
-	"text": "Every day. Morning to night. Routine is good.",
-	"responses": [
-	  {
-		"text": "Sounds like work helps you avoid thinking.",
-		"next_dialogue_tag": "baker_crack"
-	  }
-	]
-  }
-],
+  "baker_every_day": [
+    {
+      "conditions": [],
+      "text": "Every day. Morning to night. Routine is good.",
+      "responses": [
+        {
+          "text": "Sounds like work helps you avoid thinking.",
+          "next_dialogue_tag": "baker_crack"
+        }
+      ]
+    }
+  ],
 
-"baker_tiring": [
-  {
-	"conditions": [],
-	"text": "Tiring? No… but quiet. Too quiet sometimes.",
-	"responses": [
-	  {
-		"text": "A lot of people hide inside routine.",
-		"next_dialogue_tag": "baker_talks"
-	  }
-	]
-  }
-],
+  "baker_tiring": [
+    {
+      "conditions": [],
+      "text": "Tiring? No… but quiet. Too quiet sometimes.",
+      "responses": [
+        {
+          "text": "A lot of people hide inside routine.",
+          "next_dialogue_tag": "baker_talks"
+        }
+      ]
+    }
+  ],
 
-"baker_talks": [
-  {
-	"conditions": [],
-	"text": "When I stop baking.. my head gets loud.",
-	"responses": [
-	  {
-		"text": "That sounds lonely.",
-		"next_dialogue_tag": "baker_crack"
-	  },
-	  {
-		"text": "What do you hear when it gets loud?",
-		"next_dialogue_tag": "baker_talks_more"
-	  }
-	]
-  }
-],
+  "baker_talks": [
+    {
+      "conditions": [],
+      "text": "When I stop baking.. my head gets loud.",
+      "responses": [
+        {
+          "text": "That sounds lonely.",
+          "next_dialogue_tag": "baker_crack"
+        },
+        {
+          "text": "What do you hear when it gets loud?",
+          "next_dialogue_tag": "baker_talks_more"
+        }
+      ]
+    }
+  ],
 
+  "baker_talks_more": [
+    {
+      "conditions": [],
+      "text": "I hear that if I’m not useful… I’m nothing.",
+      "responses": [
+        {
+          "text": "You don’t stop being someone when you rest.",
+          "next_dialogue_tag": "baker_ending"
+        }
+      ]
+    }
+  ],
 
-"baker_talks_more": [
-  {
-	"conditions": [],
-	"text": "I hear that if I’m not useful… I’m nothing.",
-	"responses": [
-	  {
-		"text": "You don’t stop being someone when you rest.",
-		"next_dialogue_tag": "baker_ending"
-	  }
-	]
-  }
-],
+  "baker_crack": [
+    {
+      "conditions": [],
+      "text": "…Sí. Maybe that’s true. When I stop baking… my head gets loud."
+    }
+  ],
 
+  "baker_ending": [
+    {
+      "conditions": [],
+      "text": "…Gracias. I think I knew that. I just never said it out loud.",
+      "game_tags_to_add": ["baker_unmasked"]
+    }
+  ],
 
-"baker_crack": [
-  {
-	"conditions": [],
-	"text": "…Sí. Maybe that’s true. When I stop baking… my head gets loud."
-  }
-],
+  "barman": [
+    {
+      "conditions": [],
+      "text": "Evening. Same drink as usual… or are you just here to listen?",
+      "responses": [
+        {
+          "text": "Just checking how you’re doing.",
+          "next_dialogue_tag": "barman_alone"
+        },
+        {
+          "text": "I’ll take whatever’s easiest.",
+          "next_dialogue_tag": "barman_deflect"
+        }
+      ]
+    }
+  ],
 
-"baker_ending": [
-  {
-	"conditions": [],
-	"text": "…Gracias. I think I knew that. I just never said it out loud.",
-	"game_tags_to_add": [ "baker_unmasked" ]
-  }
-],
+  "barman_deflect": [
+    {
+      "conditions": [],
+      "text": "Easiest is quiet. Quiet pays the bills.",
+      "responses": [
+        {
+          "text": "You sound tired.",
+          "next_dialogue_tag": "barman_alone"
+        },
+        {
+          "text": "Fair enough. I’ll leave you to it.",
+          "next_dialogue_tag": "barman_leave"
+        }
+      ]
+    }
+  ],
 
-"barman": [
-  {
-	"conditions": [],
-	"text": "Evening. Same drink as usual… or are you just here to listen?",
-	"responses": [
-	  {
-		"text": "Just checking how you’re doing.",
-		"next_dialogue_tag": "barman_alone"
-	  },
-	  {
-		"text": "I’ll take whatever’s easiest.",
-		"next_dialogue_tag": "barman_deflect"
-	  }
-	]
-  }
-],
+  "barman_alone": [
+    {
+      "conditions": [],
+      "text": "It’s slow most nights. People drink, talk, leave. I stay.",
+      "responses": [
+        {
+          "text": "That sounds lonely.",
+          "next_dialogue_tag": "barman_reflect"
+        },
+        {
+          "text": "At least it’s peaceful.",
+          "next_dialogue_tag": "barman_deflect"
+        }
+      ]
+    }
+  ],
 
-"barman_deflect": [
-  {
-	"conditions": [],
-	"text": "Easiest is quiet. Quiet pays the bills.",
-	"responses": [
-	  {
-		"text": "You sound tired.",
-		"next_dialogue_tag": "barman_alone"
-	  },
-	  {
-		"text": "Fair enough. I’ll leave you to it.",
-		"next_dialogue_tag": "barman_leave"
-	  }
-	]
-  }
-],
+  "barman_reflect": [
+    {
+      "conditions": [],
+      "text": "Lonely’s just a word. This place keeps me busy enough.",
+      "responses": [
+        {
+          "text": "Busy doesn’t mean fulfilled.",
+          "next_dialogue_tag": "barman_crack"
+        },
+        {
+          "text": "As long as it works for you.",
+          "next_dialogue_tag": "barman_deflect"
+        }
+      ]
+    }
+  ],
 
-"barman_alone": [
-  {
-	"conditions": [],
-	"text": "It’s slow most nights. People drink, talk, leave. I stay.",
-	"responses": [
-	  {
-		"text": "That sounds lonely.",
-		"next_dialogue_tag": "barman_reflect"
-	  },
-	  {
-		"text": "At least it’s peaceful.",
-		"next_dialogue_tag": "barman_deflect"
-	  }
-	]
-  }
-],
+  "barman_crack": [
+    {
+      "conditions": [],
+      "text": "…Maybe. When the bar closes, the noise in my head doesn’t.",
+      "responses": [
+        {
+          "text": "What does that noise say?",
+          "next_dialogue_tag": "barman_core"
+        },
+        {
+          "text": "Maybe you just need sleep.",
+          "next_dialogue_tag": "barman_deflect"
+        }
+      ]
+    }
+  ],
 
-"barman_reflect": [
-  {
-	"conditions": [],
-	"text": "Lonely’s just a word. This place keeps me busy enough.",
-	"responses": [
-	  {
-		"text": "Busy doesn’t mean fulfilled.",
-		"next_dialogue_tag": "barman_crack"
-	  },
-	  {
-		"text": "As long as it works for you.",
-		"next_dialogue_tag": "barman_deflect"
-	  }
-	]
-  }
-],
+  "barman_core": [
+    {
+      "conditions": [],
+      "text": "It says I’m only useful while I’m pouring drinks. After that… I disappear.",
+      "responses": [
+        {
+          "text": "You don’t disappear when the bar closes.",
+          "next_dialogue_tag": "barman_mask_off"
+        },
+        {
+          "text": "That’s just part of the job.",
+          "next_dialogue_tag": "barman_leave"
+        }
+      ]
+    }
+  ],
 
-"barman_crack": [
-  {
-	"conditions": [],
-	"text": "…Maybe. When the bar closes, the noise in my head doesn’t.",
-	"responses": [
-	  {
-		"text": "What does that noise say?",
-		"next_dialogue_tag": "barman_core"
-	  },
-	  {
-		"text": "Maybe you just need sleep.",
-		"next_dialogue_tag": "barman_deflect"
-	  }
-	]
-  }
-],
+  "barman_mask_off": [
+    {
+      "conditions": [],
+      "text": "He stops wiping the glass. His shoulders drop.",
+      "responses": [
+        {
+          "text": "Stay with him in the silence.",
+          "next_dialogue_tag": "barman_ending_mask"
+        }
+      ]
+    }
+  ],
 
-"barman_core": [
-  {
-	"conditions": [],
-	"text": "It says I’m only useful while I’m pouring drinks. After that… I disappear.",
-	"responses": [
-	  {
-		"text": "You don’t disappear when the bar closes.",
-		"next_dialogue_tag": "barman_mask_off"
-	  },
-	  {
-		"text": "That’s just part of the job.",
-		"next_dialogue_tag": "barman_leave"
-	  }
-	]
-  }
-],
+  "barman_ending_mask": [
+    {
+      "conditions": [],
+      "text": "…Thanks. No one’s said that to me before. Maybe I don’t have to vanish after all.",
+      "game_tags_to_add": ["barman_unmasked"]
+    }
+  ],
 
-"barman_mask_off": [
-  {
-	"conditions": [],
-	"text": "He stops wiping the glass. His shoulders drop.",
-	"responses": [
-	  {
-		"text": "Stay with him in the silence.",
-		"next_dialogue_tag": "barman_ending_mask"
-	  }
-	]
-  }
-],
+  "barman_leave": [
+    {
+      "conditions": [],
+      "text": "He nods, already reaching for another glass. The bar hums on without you."
+    }
+  ],
 
-"barman_ending_mask": [
-  {
-	"conditions": [],
-	"text": "…Thanks. No one’s said that to me before. Maybe I don’t have to vanish after all.",
-	"game_tags_to_add": [ "barman_unmasked" ]
-
-  }
-],
-
-"barman_leave": [
-  {
-	"conditions": [],
-	"text": "He nods, already reaching for another glass. The bar hums on without you."
-  }
-],
-
-"intro_0" : [
-	{
-		"conditions": [],
-		"text": "Hmmm... So this is the village. Things seem fine to me...",
-		"responses": [
-	  {
-		"text": "Continue...",
-		"next_dialogue_tag": "intro_1"
-	  }
-	]
-	}
-],
-"intro_1" : [
-	{
-		"conditions": [],
-		"text": "It's very quiet here. The rumours made it sound a lot more chaotic.",
-		"next_dialogue_tag": "intro_2",
-		"responses": [
-	  {
-		"text": "Continue...",
-		"next_dialogue_tag": "intro_2"
-	  }
-	]
-	}
-],
-"intro_2" : [
-	{
-		"conditions": [],
-		"text": "Those cityfolk tend to exaggerate, though.",
-		"responses": [
-	  {
-		"text": "Continue...",
-		"next_dialogue_tag": "intro_3"
-	  }
-	]
-	}
-],
-"intro_3" : [
-	{
-		"conditions": [],
-		"text": "I'm sure there's something I could help with.",
-		"responses": [
-	  {
-		"text": "Continue...",
-		"next_dialogue_tag": "intro_4"
-	  }
-	]
-	}
-],
-"intro_4" : [
-	{
-		"conditions": [],
-		"text": "I should go speak to some of the villagers, find out what all that chatter was about..."
-	}
-]
-
-
+  "intro_0": [
+    {
+      "conditions": [],
+      "text": "Hmmm... So this is the village. Things seem fine to me...",
+      "responses": [
+        {
+          "text": "Continue...",
+          "next_dialogue_tag": "intro_1"
+        }
+      ]
+    }
+  ],
+  "intro_1": [
+    {
+      "conditions": [],
+      "text": "It's very quiet here. The rumours made it sound a lot more chaotic.",
+      "next_dialogue_tag": "intro_2",
+      "responses": [
+        {
+          "text": "Continue...",
+          "next_dialogue_tag": "intro_2"
+        }
+      ]
+    }
+  ],
+  "intro_2": [
+    {
+      "conditions": [],
+      "text": "Those cityfolk tend to exaggerate, though.",
+      "responses": [
+        {
+          "text": "Continue...",
+          "next_dialogue_tag": "intro_3"
+        }
+      ]
+    }
+  ],
+  "intro_3": [
+    {
+      "conditions": [],
+      "text": "I'm sure there's something I could help with.",
+      "responses": [
+        {
+          "text": "Continue...",
+          "next_dialogue_tag": "intro_4"
+        }
+      ]
+    }
+  ],
+  "intro_4": [
+    {
+      "conditions": [],
+      "text": "I should go speak to some of the villagers, find out what all that chatter was about..."
+    }
+  ]
 }
-  

@@ -41,28 +41,45 @@ func _select_dialogue(entity_tag: String) -> DialogueData:
 	game_tags.append_array(GameEventTracker.get_active_tags())
 	
 	# Selects the first dialogue with valid tags.
-	var pool : Array = _dialogue_data.get(dialogue_tag, [])
-	for entry in pool:
-		var conditions : Array = entry.conditions
+	var dialogue_options : Array = _dialogue_data.get(dialogue_tag, [])
+	for dialogue in dialogue_options:
 		
-		if _matches(conditions, game_tags):
-			_current_dialogue = DialogueData.new(entry)
+		var _dialogue_conditions = dialogue.get("conditions", [])
+		if _matches(_dialogue_conditions, game_tags):
+			
+			_current_dialogue = DialogueData.new(dialogue)
+			_disable_invalid_responses(_current_dialogue, game_tags)
+			
 			EntityStateManager.set_next_dialogue_tag(_current_npc_tag, _current_dialogue.next_dialogue_tag)
-			
-			# Apply any tags in the dialogue.
-			var new_game_tags = entry.get("game_tags_to_add", [])
-			for tag : String in new_game_tags:
-				GameEventTracker.activate_event(tag)
-				
-			var new_entity_tags = entry.get("entity_tags_to_add", [])
-			for tag : String in new_entity_tags:
-				EntityStateManager.add_tag(entity_tag, tag)
-			
-			_debug_print_all_tags(entity_tag)
+			_add_tags_from_dialogue(_current_dialogue, entity_tag)
 			
 			return _current_dialogue
 			
-	return null  ## fallback
+	return null # No dialogue found.
+
+
+#---------------------------------------------------------------------------------------------------
+func _disable_invalid_responses(dialogue : DialogueData, active_tags : Array) -> void:
+	for reponse_data : DialogueData in dialogue.responses:
+		var response_conditions = reponse_data.raw_data.get("conditions", [])
+		if not _matches(response_conditions, active_tags):
+			reponse_data.enabled = false
+
+
+#---------------------------------------------------------------------------------------------------
+func _add_tags_from_dialogue(dialogue : DialogueData, entity_tag: String) -> void:
+	
+	# Add game tags
+	var new_game_tags = dialogue.raw_data.get("game_tags_to_add", [])
+	for tag : String in new_game_tags:
+		GameEventTracker.activate_event(tag)
+	
+	# Add character tags
+	var new_entity_tags = dialogue.raw_data.get("entity_tags_to_add", [])
+	for tag : String in new_entity_tags:
+		EntityStateManager.add_tag(entity_tag, tag)
+	
+	_debug_print_all_tags(entity_tag)
 
 
 #---------------------------------------------------------------------------------------------------

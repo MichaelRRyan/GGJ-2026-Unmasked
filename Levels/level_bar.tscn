@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://p8me13tpt1is" path="res://Levels/level_base.tscn" id="1_f8ooi"]
 [ext_resource type="Texture2D" uid="uid://cykirs728knxr" path="res://Assets/Images/Pub/pub.png" id="2_rli2f"]
 [ext_resource type="PackedScene" uid="uid://cja4dwr4nk8gf" path="res://Features/Door2D/door.tscn" id="3_10l4y"]
-[ext_resource type="PackedScene" path="res://Features/NPC2D/barman.tscn" id="4_sqqi2"]
+[ext_resource type="PackedScene" uid="uid://c4mb7pd7wvmlp" path="res://Features/NPC2D/barman.tscn" id="4_sqqi2"]
 
 [node name="LevelBase" unique_id=391544845 instance=ExtResource("1_f8ooi")]
 
@@ -12,7 +12,7 @@ scale = Vector2(0.987729, 0.9908061)
 texture = ExtResource("2_rli2f")
 
 [node name="Barman" parent="." index="3" unique_id=2110108148 instance=ExtResource("4_sqqi2")]
-position = Vector2(-66, 15)
+position = Vector2(14, -11)
 scale = Vector2(1.4, 1.4)
 
 [node name="Door" parent="Entities" parent_id_path=PackedInt32Array(721033671) index="0" unique_id=702500341 instance=ExtResource("3_10l4y")]
